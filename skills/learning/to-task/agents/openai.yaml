@@ -1,0 +1,5 @@
+interface:
+  display_name: "生成学习任务"
+  short_description: "从 SOP 规划下一批学习任务"
+policy:
+  allow_implicit_invocation: false

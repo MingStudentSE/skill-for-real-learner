@@ -1,0 +1,5 @@
+interface:
+  display_name: "生成学习 SOP"
+  short_description: "将学习讨论整理为可执行的 SOP"
+policy:
+  allow_implicit_invocation: false

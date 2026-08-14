@@ -1,0 +1,5 @@
+interface:
+  display_name: "学习复盘"
+  short_description: "在检查点评估学习证据"
+policy:
+  allow_implicit_invocation: false
