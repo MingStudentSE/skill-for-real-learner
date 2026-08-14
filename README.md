@@ -4,6 +4,17 @@
 
 本仓库借鉴并依赖 [Matt Pocock 的 Skills for Real Engineers](https://github.com/mattpocock/skills) 中的 `grilling`、`teach` 与 `research`：用访谈对齐真正的问题，用教学和练习形成反馈，再用证据决定下一步。学习流程本身保留在你自己的工作区，随时可以阅读、调整和扩展。
 
+## Design sources
+
+本仓库的学习方法还主要受成甲老师两本书启发；它们决定的是**如何学习和验证**，不是替代某个领域的一手资料或专业判断。
+
+| 书 | 对 Skill 设计的贡献 |
+| --- | --- |
+| 《好好学习：个人知识管理精进指南（升级版）》 | 将「行动改变」而非阅读完成作为学习标准；启发了 `teach-me` 的讲回、微实验和反馈，以及 `study-review` 用表现证据与反思决定下一步。 |
+| 《好好思考（全新升级版）》 | 将基本问题、最小必要知识、概念边界与对知识的诚实带入流程；它们成为 `to-sop` 的范围设计、`learn-modeling` 对原材料与补充解释的区分，以及 `teach-me` 的概念校准。 |
+
+两本书的方法在 [成甲学习闭环](skills/learning/teach-me/references/chengjia-teaching-loop.md) 中被编译为可执行判断：`问题 → 概念 → 行动 → 反思`。它不替代原书，也不以书中的方法代替查证最新事实或专业规范。
+
 ## Installation
 
 先安装上游的基础能力。你可以直接安装完整套件；若在安装器中只选择部分 skill，至少选择 `grilling`、`teach` 与 `research`：
