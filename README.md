@@ -6,7 +6,7 @@
 
 ## Installation
 
-先安装上游的基础能力。在安装器中选择 `grilling`、`teach` 与 `research`：
+先安装上游的基础能力。你可以直接安装完整套件；若在安装器中只选择部分 skill，至少选择 `grilling`、`teach` 与 `research`：
 
 ```bash
 npx skills@latest add mattpocock/skills
