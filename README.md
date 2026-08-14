@@ -38,8 +38,8 @@ grill-me / grill-with-learn / strategyfinder
              study-review
 ```
 
-- `/grill-me`：上游的通用访谈入口。适合先把你真正想解决的问题讲清楚。
-- `/grill-with-learn`：学习场景的访谈入口。适合澄清学习使命、当前取舍或下一项决策。
+- `/grill-me`：无状态访谈。聊完即结束，不留下文件。
+- `/grill-with-learn`：有状态的学习访谈。它会沉淀学习笔记，供后续学习流程复用。
 - `/strategyfinder`：长期战略入口。适合决定有限精力该投入、暂停或放弃什么；它维护唯一的 `STRATEGY-MAP.md`，不替代日常学习计划。
 
 接着，`/to-sop` 把共识变成一个稳定阶段的学习方法，`/to-task` 把它转成当前月、周、日或单次任务，`/teach-me` 围绕真实问题开展讲解、讲回和微实验。到约定检查点后，`/study-review` 只依据已经展示的能力，决定推进、补强或修订 SOP。
