@@ -10,14 +10,14 @@
 
 | 书 | 对 Skill 设计的贡献 |
 | --- | --- |
-| 《好好学习：个人知识管理精进指南（升级版）》 | 将「行动改变」而非阅读完成作为学习标准；启发了 `teach-me` 的讲回、微实验和反馈，以及 `study-review` 用表现证据与反思决定下一步。 |
+| 《好好学习：个人知识管理精进指南（升级版）》 | 将「行动改变」而非阅读完成作为学习标准；启发了 `teach-me` 的讲回、微实验和反馈，以及 `study-review` 用结果检验学习内容是否真正用起来，再校正学习设计。 |
 | 《好好思考（全新升级版）》 | 将基本问题、最小必要知识、概念边界与对知识的诚实带入流程；它们成为 `to-sop` 的范围设计、`learn-modeling` 对原材料与补充解释的区分，以及 `teach-me` 的概念校准。 |
 
 两本书的方法在 [成甲学习闭环](skills/learning/teach-me/references/chengjia-teaching-loop.md) 中被编译为可执行判断：`问题 → 概念 → 行动 → 反思`。它不替代原书，也不以书中的方法代替查证最新事实或专业规范。
 
 ## Installation
 
-先安装上游的基础能力。你可以直接安装完整套件；若在安装器中只选择部分 skill，至少选择 `grilling`、`teach` 与 `research`：
+先安装上游的基础能力。你可以直接安装完整套件；若在安装器中只选择部分 skill，至少选择 `grilling`、`teach`、`research` 与 `prototype`：
 
 ```bash
 npx skills@latest add mattpocock/skills
@@ -29,7 +29,7 @@ npx skills@latest add mattpocock/skills
 npx skills@latest add MingStudentSE/skill-for-real-learner
 ```
 
-安装器会让你选择目标 Agent 和要加入的 skill。`grilling` 用于澄清学习决策，`teach` 用于讲解与练习；`strategyfinder` 在需要核实外部事实时会使用 `research`。安装与更新方式以 [上游说明](https://github.com/mattpocock/skills#installation-30-second-setup) 为准。
+安装器会让你选择目标 Agent 和要加入的 skill。`grilling` 用于澄清学习决策，`teach` 用于讲解与练习；`strategyfinder` 会按决策卡需要调用 `research` 核实外部事实，或调用 `prototype` 设计最低成本的验证实验。安装与更新方式以 [上游说明](https://github.com/mattpocock/skills#installation-30-second-setup) 为准。
 
 ## Start here
 
@@ -53,7 +53,7 @@ grill-me / grill-with-learn / strategyfinder
 - `/grill-with-learn`：有状态的学习访谈。它会沉淀学习笔记，供后续学习流程复用。
 - `/strategyfinder`：长期战略入口。适合决定有限精力该投入、暂停或放弃什么；它维护唯一的 `STRATEGY-MAP.md`，不替代日常学习计划。
 
-接着，`/to-sop` 把共识变成一个稳定阶段的学习方法，`/to-task` 把它转成当前月、周、日或单次任务，`/teach-me` 围绕真实问题开展讲解、讲回和微实验。到约定检查点后，`/study-review` 只依据已经展示的能力，决定推进、补强或修订 SOP。
+接着，`/to-sop` 把共识变成一个稳定阶段的学习方法，`/to-task` 把它转成当前月、周、日或单次任务，`/teach-me` 围绕真实问题开展讲解、讲回和微实验。到约定检查点后，`/study-review` 审查学习内容是否已经改变真实判断或行动，再以结果校正学习模型/课程、SOP 或任务。
 
 ### Shortest path
 
@@ -85,22 +85,23 @@ grill-me / grill-with-learn
 
 | Skill | 何时使用 | 产出或下一步 |
 | --- | --- | --- |
-| [`strategyfinder`](skills/learning/strategyfinder/SKILL.md) | 审视长期方向、精力配置和重大取舍 | `STRATEGY-MAP.md` 与决策卡；路线清晰后交给 `to-sop` 或 `to-task` |
+| [`strategyfinder`](skills/learning/strategyfinder/SKILL.md) | 审视长期方向、精力配置和重大取舍 | `STRATEGY-MAP.md` 与决策卡；未知项可调用 `research` 或 `prototype` 验证，路线清晰后交给 `to-sop` 或 `to-task` |
 | [`grill-with-learn`](skills/learning/grill-with-learn/SKILL.md) | 澄清学习使命或当前学习决策 | 已达成的学习共识，供 `to-sop` 或 `teach-me` 使用 |
 | [`learn-modeling`](skills/learning/learn-modeling/SKILL.md) | 阅读指定材料并建立学习者可读的内容模型 | `learning-models/` 中的材料模型，供教学使用 |
+| [`concept-card`](skills/learning/concept-card/SKILL.md) | 将笔记中点名的一个概念转成可回溯、可判断的概念卡 | 对话中的 Markdown 卡片；仅在明确指定时保存 |
 | [`to-sop`](skills/learning/to-sop/SKILL.md) | 已有清晰方向，需要稳定的阶段方法 | `MISSION.md` 与 `LEARNING-SOP.md` |
 | [`to-task`](skills/learning/to-task/SKILL.md) | 已有 SOP，需要规划当前一批行动 | `TASKS.md`；第一项任务可立即开始 |
-| [`teach-me`](skills/learning/teach-me/SKILL.md) | 围绕一个真实问题互动学习、讲回并练习 | 一次最小展示、微实验与可观察的回看点 |
-| [`study-review`](skills/learning/study-review/SKILL.md) | 到达检查点，需要判断能力是否已经展示 | `reviews/` 中的证据复盘，以及推进、补强或修订 SOP 的决定 |
+| [`teach-me`](skills/learning/teach-me/SKILL.md) | 用真实问题启动较长、跨会话的课程学习 | 维护 `teach` 教学工作区：课程 HTML、参考资料、学习记录与本轮练习证据 |
+| [`study-review`](skills/learning/study-review/SKILL.md) | 到达检查点，审核学习内容是否真的产生效果 | `reviews/` 中的学习效果证据、内容/SOP/TASKS 诊断与校正动作 |
 
 ## The evidence loop
 
-学习不是直线，也不是「完成一门课」后自动结束。每次复盘都让证据决定下一步：
+学习不是直线，也不是「完成一门课」后自动结束。每次复盘先检验学习内容产生的实际效果，再让证据决定校正什么：
 
 ```text
-任务与教学 → 独立解释 / 真实产物 / 新情境迁移 → study-review
-                                                     ↓
-                       推进 → to-task    补强 → to-task    方法失配 → to-sop
+学习模型 / 课程 / 任务 → 独立解释 / 真实产物 / 新情境迁移 → study-review
+                                                                  ↓
+                  内容失配 → learn-modeling / teach-me    任务失配 → to-task    方法失配 → to-sop
 ```
 
 长期战略只在出现影响总体取舍的新证据时，才在下一次 `/strategyfinder` 中重新打开；一次表现波动不会自动改写战略。
@@ -113,7 +114,7 @@ grill-me / grill-with-learn
 - `MISSION.md` 与 `LEARNING-SOP.md`：学习的现实原因、范围、目标能力、方法和检查点。
 - `TASKS.md`：当前批次的适应性任务。
 - `learning-models/`：按指定材料建立的内容模型，不是学习证据。
-- `reviews/`：检查点的能力证据与下一步决定。
+- `reviews/`：检查点的学习效果证据、设计诊断与校正动作。
 - `learning-records/`：只记录会影响后续教学的持久理解、纠正或真实证据。
 
 完整的共享工件格式与更新边界见 [学习工件说明](skills/learning/ARTIFACTS.md)。

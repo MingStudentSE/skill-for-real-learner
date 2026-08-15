@@ -4,4 +4,4 @@ description: A relentless interview to sharpen a learning plan or decision. Use 
 disable-model-invocation: true
 ---
 
-Run a `/grilling` session to clarify a learning mission or current decision. Do not create a learning model: `learn-modeling` only models a user-specified source material, not a discussion or decision.
+Run a `/grilling` session, using the `/learn-modeling` skill.
