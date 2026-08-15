@@ -11,7 +11,7 @@ argument-hint: "根据当前学习检查点复盘我的进展"
 
 `LEARNING-SOP.md` 与 `TASKS.md` 是有待检验的学习假设，不是复盘的评分标准。复盘先看学习内容是否产生效果，再依据差距判断该修正学习模型或课程、SOP、任务，还是补收证据。
 
-开始前阅读 [成甲的学习效果审查依据](references/chengjia-learning-effect-review.md)。
+开始前阅读 [学习效果审查依据](references/learning-effect-review.md)。
 
 ## 锁定本次要审查的学习内容
 
@@ -58,7 +58,7 @@ argument-hint: "根据当前学习检查点复盘我的进展"
 
 ## 写入复盘并校正下一轮
 
-按 [`../ARTIFACTS.md`](../ARTIFACTS.md) 的格式写入 `reviews/<date>-<checkpoint>.md`。报告以每项学习内容的预期效果、事实证据、效果状态和诊断为主；再列出哪一项设计假设被支持、削弱或仍未知。
+先阅读[学习复盘格式](references/review-format.md)，再写入 `reviews/<date>-<checkpoint>.md`。报告以每项学习内容的预期效果、事实证据、效果状态和诊断为主；再列出哪一项设计假设被支持、削弱或仍未知。
 
 根据诊断选择可组合的校正动作：
 

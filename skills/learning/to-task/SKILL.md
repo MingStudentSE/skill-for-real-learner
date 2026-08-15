@@ -17,7 +17,7 @@ argument-hint: "根据学习 SOP 规划本周、本月、当天或单次学习�
 
 ## 适应性规划
 
-按 [`../ARTIFACTS.md`](../ARTIFACTS.md) 创建或修订 `TASKS.md`，只规划当前批次：
+先阅读 [`TASKS.md` 格式](references/task-format.md)，再创建或修订 `TASKS.md`，只规划当前批次：
 
 - **月计划**设定少量能力里程碑和重要检查点。
 - **周计划**选择确实能推进这些里程碑的工作。

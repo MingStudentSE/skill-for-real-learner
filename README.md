@@ -13,7 +13,7 @@
 | 《好好学习：个人知识管理精进指南（升级版）》 | 将「行动改变」而非阅读完成作为学习标准；启发了 `teach-me` 的讲回、微实验和反馈，以及 `study-review` 用结果检验学习内容是否真正用起来，再校正学习设计。 |
 | 《好好思考（全新升级版）》 | 将基本问题、最小必要知识、概念边界与对知识的诚实带入流程；它们成为 `to-sop` 的范围设计、`learn-modeling` 对原材料与补充解释的区分，以及 `teach-me` 的概念校准。 |
 
-两本书的方法在 [成甲学习闭环](skills/learning/teach-me/references/chengjia-teaching-loop.md) 中被编译为可执行判断：`问题 → 概念 → 行动 → 反思`。它不替代原书，也不以书中的方法代替查证最新事实或专业规范。
+这些方法被分别编译为 [教学闭环](skills/learning/teach-me/references/learning-loop.md) 与 [学习效果审查依据](skills/learning/study-review/references/learning-effect-review.md) 中的可执行判断。它们不替代原书，也不以书中的方法代替查证最新事实或专业规范。
 
 ## Installation
 
@@ -117,7 +117,7 @@ grill-me / grill-with-learn
 - `reviews/`：检查点的学习效果证据、设计诊断与校正动作。
 - `learning-records/`：只记录会影响后续教学的持久理解、纠正或真实证据。
 
-完整的共享工件格式与更新边界见 [学习工件说明](skills/learning/ARTIFACTS.md)。
+学习流程共享哪些工件及其边界见 [学习工件说明](skills/learning/ARTIFACTS.md)；每个 skill 所创建文件的格式随该 skill 一起发布。
 
 ## Why these skills exist
 
