@@ -13,7 +13,7 @@
 | 《好好学习：个人知识管理精进指南（升级版）》 | 将「行动改变」而非阅读完成作为学习标准；启发了 `teach-me` 的讲回、微实验和反馈，以及 `study-review` 用结果检验学习内容是否真正用起来，再校正学习设计。           |
 | 《好好思考（全新升级版）》          | 将基本问题、最小必要知识、概念边界与对知识的诚实带入流程；它们成为 `to-sop` 的范围设计、`learn-modeling` 对原材料与补充解释的区分，以及 `teach-me` 的概念校准。 |
 
-这些方法被分别编译为 [教学闭环](skills/learning/teach-me/references/learning-loop.md) 与 [学习效果审查依据](skills/learning/study-review/references/learning-effect-review.md) 中的可执行判断。它们不替代原书，也不以书中的方法代替查证最新事实或专业规范。
+这些方法被分别编译为 [教学闭环](skills/teach-me/references/learning-loop.md) 与 [学习效果审查依据](skills/study-review/references/learning-effect-review.md) 中的可执行判断。它们不替代原书，也不以书中的方法代替查证最新事实或专业规范。
 
 ## Installation
 
@@ -28,6 +28,8 @@ npx skills@latest add mattpocock/skills
 ```bash
 npx skills@latest add MingStudentSE/skill-for-real-learner
 ```
+
+每个入口的面向人说明见[学习 skill 文档](docs/README.md)：它们说明何时使用、可观察的有效信号和与其他入口的边界，而不复述运行步骤。
 
 ## Start here
 
@@ -83,14 +85,14 @@ grill-me / grill-with-learn / strategyfinder
 
 | Skill                                                             | 何时使用                 | 产出                               |
 | ----------------------------------------------------------------- | -------------------- | -------------------------------- |
-| [`ask-ming`](skills/learning/ask-ming/SKILL.md)                   | 不确定下一步该用哪个学习 skill   | 一条建议手动执行的命令与工件说明                 |
-| [`strategyfinder`](skills/learning/strategyfinder/SKILL.md)       | 审视长期方向、精力配置和重大取舍     | `STRATEGY-MAP.md` 与决策卡           |
-| [`grill-with-learn`](skills/learning/grill-with-learn/SKILL.md)   | 澄清学习使命或当前学习决策        | 已达成的学习共识，可作为其他工件的输入              |
-| [`learn-one-concept`](skills/learning/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念卡               |
-| [`to-sop`](skills/learning/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |
-| [`to-task`](skills/learning/to-task/SKILL.md)                     | 已有 SOP，需要规划当前一批行动    | `TASKS.md`；第一项任务可立即开始            |
-| [`teach-me`](skills/learning/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | 课程、参考资料、学习记录与本轮练习证据              |
-| [`study-review`](skills/learning/study-review/SKILL.md)           | 到达检查点，审核学习内容是否真的产生效果 | `reviews/` 中的效果证据、诊断与校正动作        |
+| [`ask-ming`](skills/ask-ming/SKILL.md)                   | 不确定下一步该用哪个学习 skill   | 一条建议手动执行的命令与工件说明                 |
+| [`strategyfinder`](skills/strategyfinder/SKILL.md)       | 审视长期方向、精力配置和重大取舍     | `STRATEGY-MAP.md` 与决策卡           |
+| [`grill-with-learn`](skills/grill-with-learn/SKILL.md)   | 澄清学习使命或当前学习决策        | 已达成的学习共识，可作为其他工件的输入              |
+| [`learn-one-concept`](skills/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念卡               |
+| [`to-sop`](skills/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |
+| [`to-task`](skills/to-task/SKILL.md)                     | 已有 SOP，需要规划当前一批行动    | `TASKS.md`；第一项任务可立即开始            |
+| [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | 课程、参考资料、学习记录与本轮练习证据              |
+| [`study-review`](skills/study-review/SKILL.md)           | 到达检查点，审核学习内容是否真的产生效果 | `reviews/` 中的效果证据、诊断与校正动作        |
 
 ### Model-invoked（也可手动调用）
 
@@ -98,8 +100,8 @@ grill-me / grill-with-learn / strategyfinder
 
 | Skill | 何时使用 | 产出 |
 | --- | --- | --- |
-| [`learn-modeling`](skills/learning/learn-modeling/SKILL.md) | 阅读指定材料并建立学习者可读的内容模型 | `learning-models/` 中的材料模型 |
-| [`concept-card`](skills/learning/concept-card/SKILL.md) | 将笔记中点名的一个概念转成可回溯、可判断的概念卡 | Markdown 概念卡；仅在明确要求保存时写入 |
+| [`learn-modeling`](skills/learn-modeling/SKILL.md) | 阅读指定材料并建立学习者可读的内容模型 | `learning-models/` 中的材料模型 |
+| [`concept-card`](skills/concept-card/SKILL.md) | 将笔记中点名的一个概念转成可回溯、可判断的概念卡 | Markdown 概念卡；仅在明确要求保存时写入 |
 
 ## The evidence loop
 
@@ -124,7 +126,7 @@ grill-me / grill-with-learn / strategyfinder
 - `reviews/`：检查点的学习效果证据、设计诊断与校正动作。
 - `learning-records/`：只记录会影响后续教学的持久理解、纠正或真实证据。
 
-学习流程共享哪些工件及其边界见 [学习工件说明](skills/learning/ARTIFACTS.md)；每个 skill 所创建文件的格式随该 skill 一起发布。
+学习流程共享哪些工件及其边界见 [学习工件说明](skills/ARTIFACTS.md)；每个 skill 所创建文件的格式随该 skill 一起发布。
 
 ## Why these skills exist
 
