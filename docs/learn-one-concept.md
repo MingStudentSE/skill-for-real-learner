@@ -40,4 +40,4 @@
 
 ## 它在流程中的位置
 
-它是随时可用的短路径。已安装上游 `/grill-me`（它运行 `grilling` 访谈）的学习者可用 `/grill-me → /learn-one-concept`，先把现实问题收窄为一个概念；`/grill-me` 不属于本仓库。若需要本仓库内的学习使命质询，可先用 [`grill-with-learn`](grill-with-learn.md)。它不替代跨会话的 [`teach-me`](teach-me.md) 或检查点式的 [`study-review`](study-review.md)；不确定该选哪个入口时使用 [`ask-ming`](ask-ming.md)。
+它是随时可用的短路径。已安装上游 `/grill-me`（它运行 `grilling` 访谈）的学习者可用 `/grill-me → /learn-one-concept`，先把现实问题收窄为一个概念；`/grill-me` 不属于本仓库。若需要本仓库内的学习使命质询，可先用 [`grill-with-learn`](grill-with-learn.md)。它负责从讲解开始建立理解；若想先检验当前掌握而不接受教学，使用 [`study-review`](study-review.md)。不确定该选哪个入口时使用 [`ask-ming`](ask-ming.md)。

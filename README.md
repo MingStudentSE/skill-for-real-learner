@@ -59,7 +59,7 @@ grill-me / grill-with-learn / strategyfinder
 - `/to-sop`：把已经澄清的学习方向整理为当前阶段可长期执行的 SOP，明确目标能力、学习方法、资源策略与复盘检查点。
 - `/to-task`：根据 SOP 规划当前一批可执行的学习任务，为每项任务写清证据、练习、反馈、投入与完成条件。
 - `/teach-me`：围绕真实问题开展跨会话教学，通过讲解、讲回、练习与微实验，把知识转成可观察的行动证据。
-- `/study-review`：在持续学习一段时间、积累了真实练习或任务证据后调用，而不是每次学习后都调用；它检验学习是否改善了解释、判断或行动，定位课程、任务、SOP 或长期战略假设的问题，并为调整后续任务、SOP 和必要时重审战略提供依据。
+- `/study-review`：先确定要证明的解释、判断或行动，再盘点已有作品与反馈；证据不足时通过无提示展示和苏格拉底式追问现场取证。它既能独立检验一个概念，也能在学习检查点校正课程、SOP 与任务，并记录需要重审的使命或战略信号。
 
 ### Shortest path
 
@@ -69,7 +69,7 @@ grill-me / grill-with-learn / strategyfinder
 /grill-me → /learn-one-concept
 ```
 
-先运行 `/grill-me`，把现实问题或好奇点收敛为一个要解决的概念；再运行 `/learn-one-concept <概念>`，通过讲回、判断或微行动完成一个轻量学习回合。它适合立即学懂一个点，不替代跨会话课程或阶段性学习复盘。
+先运行 `/grill-me`，把现实问题或好奇点收敛为一个要解决的概念；再运行 `/learn-one-concept <概念>`，通过讲回、判断或微行动完成一个轻量学习回合。它适合从讲解开始学懂一个点；若想先检验当前掌握而不接受教学，使用 `/study-review`。
 
 ### Building model notes
 
@@ -92,7 +92,7 @@ grill-me / grill-with-learn / strategyfinder
 | [`to-sop`](skills/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |
 | [`to-task`](skills/to-task/SKILL.md)                     | 已有 SOP，需要规划当前一批行动    | `TASKS.md`；第一项任务可立即开始            |
 | [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | 课程、参考资料、学习记录与本轮练习证据              |
-| [`study-review`](skills/study-review/SKILL.md)           | 到达检查点，审核学习内容是否真的产生效果 | `reviews/` 中的效果证据、诊断与校正动作        |
+| [`study-review`](skills/study-review/SKILL.md)           | 检验一个概念/能力，或在检查点审核学习效果 | 证据化结论、工件处理决定与 `reviews/` 复盘 |
 
 ### Model-invoked（也可手动调用）
 

@@ -13,7 +13,7 @@
 | 一个真实问题需要连续多轮教学、练习和反馈 | `/teach-me` |
 | 只想快速学懂一个概念 | [`learn-one-concept`](learn-one-concept.md) |
 | 指定材料还没有可用的结构 | [`learn-modeling`](learn-modeling.md) |
-| 已积累一段时间的表现证据，需要检查效果 | [`study-review`](study-review.md) |
+| 想先检验当前掌握，或已积累表现证据需要检查效果 | [`study-review`](study-review.md) |
 
 ## 前提条件
 

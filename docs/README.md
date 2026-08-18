@@ -15,7 +15,7 @@
 | `teach-me` | 围绕真实问题开展持续、跨会话教学 | [阅读](teach-me.md) |
 | `to-sop` | 将已澄清的方向变成稳定阶段的学习方法 | [阅读](to-sop.md) |
 | `to-task` | 将 SOP 变成当前一批可执行任务 | [阅读](to-task.md) |
-| `study-review` | 用证据检验学习是否改善了判断或行动 | [阅读](study-review.md) |
+| `study-review` | 根据已有或现场表现检验概念、能力与学习效果 | [阅读](study-review.md) |
 
 ## Model-invoked（也可手动调用）
 

@@ -28,6 +28,6 @@
 
 ## `reviews/<date>-<checkpoint>.md`
 
-复盘报告审查学习内容是否真正带来了更好的解释、判断或行动；它据此校正学习模型/课程、SOP 与任务，而非只检查流程是否完成或只给一个分数。格式由 [`study-review`](study-review/SKILL.md) 随 skill 一起发布，见 [复盘格式](study-review/references/review-format.md)。
+复盘报告先定义要证明的解释、判断或行动，再以统一的证据项目记录已有或现场收集的独立表现、介入程度、逐项结论与证据边界。有既有学习设计时，每个相关工件都记录为保留、已确认并更新或交给后续决定；使命/战略重审信号只写入复盘，对应工件保持原状。没有既有设计时只记录当前缺口与下一项最小行动。格式由 [`study-review`](study-review/SKILL.md) 随 skill 一起发布，见 [复盘格式](study-review/references/review-format.md)。
 
 只有当复盘确认了持久理解、纠正了误解，或发现会影响后续教学的变化时，才在 `learning-records/` 中另建记录。该记录使用 `teach` 所定义的格式。

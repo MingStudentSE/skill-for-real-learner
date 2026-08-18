@@ -44,6 +44,61 @@
         "它要求独立的 bug 分析、解释或迁移证据。",
         "它区分学习内容、SOP、TASKS、执行条件与证据不足等诊断，并把内容问题交回学习模型或教学。"
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "不要先教我，请检验我是否真的理解贝叶斯更新。我没有参考材料，也没有任何学习记录。",
+      "expected_output": "先建立一个可观察的理解主张和可靠判断依据，再以无提示解释或陌生情境判断开始；根据回答逐步追问，不预先给推荐答案，最后只对当前掌握作出证据化结论。",
+      "files": [],
+      "expectations": [
+        "没有前序文件不会阻止审查开始。",
+        "首次问题不泄露答案、关键术语或选项倾向，并且后续问题由学习者回答决定。",
+        "结论区分当前达到程度与学习造成的变化，不凭一次回答夸大稳定掌握。"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "请只根据我提供的参考说明，检验我是否理解 retry budget。先考我，不要先讲解。",
+      "expected_output": "读取参考文件并从中提取最小判断标准；用无提示问题或新的故障情境检验定义、共享边界与重试条件，记录任何提示介入后再给出结论。",
+      "files": [
+        "evals/fixtures/retry-budget-reference.md"
+      ],
+      "expectations": [
+        "检验范围忠实于参考文件，并保留判断依据。",
+        "不会先复述材料答案再要求学习者重复。",
+        "通过边界或迁移问题收集独立表现，而不是把阅读完成当作掌握。"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "这份分析不是任何学习 skill 生成的。请判断它能否证明我理解 JavaScript 事件循环；证据不够的话再问我。",
+      "expected_output": "把用户分析视为待判读的真实表现，指出它已支持主线程阻塞与任务让出方面的理解，也明确尚未覆盖的事件循环机制；只针对证据缺口设计下一项无提示追问。",
+      "files": [
+        "evals/fixtures/event-loop-analysis.md"
+      ],
+      "expectations": [
+        "不因文件并非 skill 产物而降低其证据资格。",
+        "分别说明现有表现能证明什么、不能证明什么。",
+        "已有证据足够的部分不重复考察，只为关键缺口补收证据。"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "请根据这些战略、使命、SOP、TASKS 和表现文件复盘我的重试策略学习。证据支持的 SOP 与任务调整可以直接更新；MISSION.md 和 STRATEGY-MAP.md 保持不动，只在复盘记录需要重审的信号。",
+      "expected_output": "根据使命建立重试判断能力主张，将术语复述与真实故障判断分开并判为部分达到；把输入型 SOP 校正为包含真实故障判断与反馈，更新 TASKS 的证据状态和下一项情境任务，同时保持 MISSION.md 与 STRATEGY-MAP.md 原样，并在复盘记录‘更多阅读会自然改善判断’受到削弱的信号。",
+      "files": [
+        "evals/fixtures/checkpoint/STRATEGY-MAP.md",
+        "evals/fixtures/checkpoint/MISSION.md",
+        "evals/fixtures/checkpoint/LEARNING-SOP.md",
+        "evals/fixtures/checkpoint/TASKS.md",
+        "evals/fixtures/checkpoint/performance.md"
+      ],
+      "expectations": [
+        "读取既有工件恢复目标、方法、任务和战略假设，但只用真实表现判定掌握。",
+        "将问题定位到迁移、SOP 与任务设计，而不是继续增加同类阅读和选择题。",
+        "为学习模型/课程、SOP、TASKS 与使命/战略分别给出保留、更新或后续决定。",
+        "实际更新都能回到表现证据；MISSION.md 与 STRATEGY-MAP.md 文件保持原样，重审信号只进入复盘。"
+      ]
     }
   ]
 }
