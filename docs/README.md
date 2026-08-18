@@ -21,7 +21,6 @@
 
 | Skill | 适合解决的问题 | 文档 |
 | --- | --- | --- |
-| `learn-modeling` | 先把指定材料变成可学习、可回溯的内容模型 | [阅读](learn-modeling.md) |
-| `concept-card` | 将一个指定概念保存为可判断、可行动的卡片 | [阅读](concept-card.md) |
+| `learn-modeling` | 将指定材料、章节或概念变成可学习、可回溯的模型笔记 | [阅读](learn-modeling.md) |
 
-上游的 `grilling`、`teach`、`research` 与 `prototype` 是另行安装的基础能力；本目录只记录本仓库发布的 10 个 learning skill。
+上游的 `grilling`、`teach`、`research` 与 `prototype` 是另行安装的基础能力；本目录只记录本仓库发布的 9 个 learning skill。

@@ -13,7 +13,8 @@
 | 长期方向或精力取舍不清楚 | [`strategyfinder`](strategyfinder.md) |
 | 学习使命或当前决定说不清 | [`grill-with-learn`](grill-with-learn.md) |
 | 已有方向或 SOP，需要继续推进 | [`to-sop`](to-sop.md) 或 [`to-task`](to-task.md) |
-| 想教学、复盘、读材料或学一个点 | 对应的专门入口 |
+| 想把材料、章节或概念整理成模型笔记 | [`learn-modeling`](learn-modeling.md) |
+| 想互动学一个概念、开展持续教学或复盘 | 对应的专门入口 |
 
 已有明确选择时，直接调用那个 skill 更快。
 

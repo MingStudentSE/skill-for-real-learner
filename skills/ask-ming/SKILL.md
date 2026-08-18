@@ -25,11 +25,10 @@ argument-hint: "我当前的学习目标、材料或卡点是："
 | 已有 SOP，需要安排当前一批可执行行动 | `/to-task` | `TASKS.md` |
 | 围绕真实问题开展跨会话教学与练习 | `/teach-me` | 课程、参考资料与学习证据 |
 | 到达检查点，需要根据表现证据决定校正什么 | `/study-review` | `reviews/<date>-<checkpoint>.md` 与校正结论 |
-| 指定材料需要先建立内容结构、概念关系和难点 | `/learn-modeling` | `learning-models/<date>-<topic>.md` |
-| 只想互动学懂一个点名概念 | `/learn-one-concept` | 本轮解释、判断或行动证据；可选概念卡 |
-| 已选定一个笔记片段中的概念，要保存为可用卡片 | `/concept-card` | Markdown 概念卡 |
+| 指定材料、章节或概念只需要整理成可回溯的模型笔记 | `/learn-modeling` | `learning-models/<date>-<topic>.md` |
+| 想通过讲回、判断或行动互动学懂一个点名概念 | `/learn-one-concept` | 本轮解释、判断或行动证据；可选概念模型 |
 
-`/learn-modeling` 和 `/concept-card` 也可被其他学习流程复用；其余表中的学习流程仍由学习者手动选择和启动。
+`/learn-modeling` 也可被其他学习流程复用；其余表中的学习流程仍由学习者手动选择和启动。
 
 ## 回答格式
 

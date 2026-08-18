@@ -71,11 +71,11 @@ grill-me / grill-with-learn / strategyfinder
 
 先运行 `/grill-me`，把现实问题或好奇点收敛为一个要解决的概念；再运行 `/learn-one-concept <概念>`，通过讲回、判断或微行动完成一个轻量学习回合。它适合立即学懂一个点，不替代跨会话课程或阶段性学习复盘。
 
-### Learning from a source
+### Building model notes
 
-书、文章、视频或课程讲义需要先被看懂时，可手动调用 `/learn-modeling`。它也是可复用的 model-invoked 能力：`teach-me` 在当前教学确实需要材料结构时，可用它建立最小必要范围的 `learning-models/<date>-<topic>.md`，再继续教学。
+书、文章、视频、章节或单个概念需要先被整理清楚时，可手动调用 `/learn-modeling`。它根据范围建立材料模型或概念模型，统一写入 `learning-models/<date>-<topic>.md`。它也是可复用的 model-invoked 能力：`teach-me` 或 `learn-one-concept` 在需要模型笔记时可以复用它。
 
-`/learn-modeling` 只解释材料，不代替教学、练习、任务规划或掌握评估。
+`/learn-modeling` 只建模知识内容，不代替互动教学、练习、任务规划或掌握评估。
 
 ## Invocation and ownership
 
@@ -88,7 +88,7 @@ grill-me / grill-with-learn / strategyfinder
 | [`ask-ming`](skills/ask-ming/SKILL.md)                   | 不确定下一步该用哪个学习 skill   | 一条建议手动执行的命令与工件说明                 |
 | [`strategyfinder`](skills/strategyfinder/SKILL.md)       | 审视长期方向、精力配置和重大取舍     | `STRATEGY-MAP.md` 与决策卡           |
 | [`grill-with-learn`](skills/grill-with-learn/SKILL.md)   | 澄清学习使命或当前学习决策        | 已达成的学习共识，可作为其他工件的输入              |
-| [`learn-one-concept`](skills/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念卡               |
+| [`learn-one-concept`](skills/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念模型              |
 | [`to-sop`](skills/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |
 | [`to-task`](skills/to-task/SKILL.md)                     | 已有 SOP，需要规划当前一批行动    | `TASKS.md`；第一项任务可立即开始            |
 | [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | 课程、参考资料、学习记录与本轮练习证据              |
@@ -96,12 +96,11 @@ grill-me / grill-with-learn / strategyfinder
 
 ### Model-invoked（也可手动调用）
 
-这两个能力可由模型在当前学习流程需要时复用，学习者也可以直接运行它们。
+这一能力可由模型在当前学习流程需要时复用，学习者也可以直接运行。
 
 | Skill | 何时使用 | 产出 |
 | --- | --- | --- |
-| [`learn-modeling`](skills/learn-modeling/SKILL.md) | 阅读指定材料并建立学习者可读的内容模型 | `learning-models/` 中的材料模型 |
-| [`concept-card`](skills/concept-card/SKILL.md) | 将笔记中点名的一个概念转成可回溯、可判断的概念卡 | Markdown 概念卡；仅在明确要求保存时写入 |
+| [`learn-modeling`](skills/learn-modeling/SKILL.md) | 将指定材料、章节或概念建成学习者可读的模型笔记 | `learning-models/` 中的材料模型或概念模型 |
 
 ## The evidence loop
 
@@ -122,7 +121,7 @@ grill-me / grill-with-learn / strategyfinder
 - `STRATEGY-MAP.md` 与 `strategy-decisions/`：长期战略与关键取舍。
 - `MISSION.md` 与 `LEARNING-SOP.md`：学习的现实原因、范围、目标能力、方法和检查点。
 - `TASKS.md`：当前批次的适应性任务。
-- `learning-models/`：按指定材料建立的内容模型，不是学习证据。
+- `learning-models/`：按指定材料、章节或概念建立的内容模型，不是学习证据。
 - `reviews/`：检查点的学习效果证据、设计诊断与校正动作。
 - `learning-records/`：只记录会影响后续教学的持久理解、纠正或真实证据。
 

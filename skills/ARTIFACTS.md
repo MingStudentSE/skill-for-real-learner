@@ -6,9 +6,9 @@
 
 ## `learning-models/<date>-<topic>.md`
 
-`learn-modeling` 用学习模型保存一份指定材料的可学习版本。模型按材料章节顺序建立内容总览，区分核心与延伸内容、原材料内容与补充解释，并记录概念关系、前置知识桥、学习难点、来源导航与实际覆盖范围。其他流程需要理解同一材料时读取这个工件，而不是把结论重写进战略、SOP、任务或复盘文件。
+`learn-modeling` 用学习模型保存一个指定知识范围的可学习版本。材料、章节或多概念范围使用材料模型，保持来源顺序并记录内容总览、核心与延伸、前置知识、概念关系、难点和覆盖范围；单个已点名概念使用概念模型，记录基本问题、定义、机制、边界、必要关系、正反例和应用假设。两者都区分原材料内容、补充解释、学习者假设与未知，并保留来源导航。
 
-学习模型不是学习过程记录、任务计划、学习复盘或掌握证明；`teach` 使用它来讲解、提问和练习。完整格式与边界见 [`learn-modeling/references/MODEL-FORMAT.md`](learn-modeling/references/MODEL-FORMAT.md)。
+同一范围只建立一种模型，不同时产出重复笔记。学习模型不是学习过程记录、任务计划、学习复盘或掌握证明；`teach` 使用它来讲解、提问和练习。完整格式与边界见 [`learn-modeling/references/MODEL-FORMAT.md`](learn-modeling/references/MODEL-FORMAT.md)。
 
 ## `STRATEGY-MAP.md` 与 `strategy-decisions/`
 
