@@ -1,6 +1,6 @@
 ---
 name: grill-with-learn
-description: A relentless interview to sharpen a learning plan or decision. Use when the learner needs to clarify a learning mission, trade-off, or current decision; do not use it to model source material.
+description: 通过持续追问，澄清学习计划或决策。
 disable-model-invocation: true
 ---
 

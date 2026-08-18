@@ -1,0 +1,5 @@
+interface:
+  display_name: "学习战略寻路"
+  short_description: "梳理长期学习方向与精力取舍"
+policy:
+  allow_implicit_invocation: false

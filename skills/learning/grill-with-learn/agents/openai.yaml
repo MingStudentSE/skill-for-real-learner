@@ -1,0 +1,5 @@
+interface:
+  display_name: "学习质询"
+  short_description: "通过追问澄清学习计划或决策"
+policy:
+  allow_implicit_invocation: false

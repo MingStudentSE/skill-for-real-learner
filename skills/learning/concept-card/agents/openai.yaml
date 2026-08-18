@@ -1,0 +1,3 @@
+interface:
+  display_name: "概念学习卡"
+  short_description: "将指定笔记制作成可用的概念卡片"

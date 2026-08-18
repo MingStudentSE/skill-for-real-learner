@@ -2,16 +2,16 @@
 
 一组把「我想学什么」变成可观察能力证据的 Agent Skills。它们不替学习者决定人生，也不把课程完成或投入时长误当成掌握；每个 skill 都只负责学习过程中的一个清晰环节，因此可以按你的现实问题自由组合。
 
-本仓库借鉴并依赖 [Matt Pocock 的 Skills for Real Engineers](https://github.com/mattpocock/skills) 中的 `grilling`、`teach` 与 `research`：用访谈对齐真正的问题，用教学和练习形成反馈，再用证据决定下一步。学习流程本身保留在你自己的工作区，随时可以阅读、调整和扩展。
+本仓库借鉴并依赖 [Matt Pocock 的 Skills for Real Engineers](https://github.com/mattpocock/skills) 中的 `grilling`、`teach`、`research` 与 `prototype`：用访谈对齐真正的问题，用教学和练习形成反馈，用研究核实外部事实，并以低成本原型验证关键假设。学习流程本身保留在你自己的工作区，随时可以阅读、调整和扩展。
 
 ## Design sources
 
 本仓库的学习方法还主要受成甲老师两本书启发；它们决定的是**如何学习和验证**，不是替代某个领域的一手资料或专业判断。
 
-| 书 | 对 Skill 设计的贡献 |
-| --- | --- |
-| 《好好学习：个人知识管理精进指南（升级版）》 | 将「行动改变」而非阅读完成作为学习标准；启发了 `teach-me` 的讲回、微实验和反馈，以及 `study-review` 用结果检验学习内容是否真正用起来，再校正学习设计。 |
-| 《好好思考（全新升级版）》 | 将基本问题、最小必要知识、概念边界与对知识的诚实带入流程；它们成为 `to-sop` 的范围设计、`learn-modeling` 对原材料与补充解释的区分，以及 `teach-me` 的概念校准。 |
+| 书                      | 对 Skill 设计的贡献                                                                                       |
+| ---------------------- | --------------------------------------------------------------------------------------------------- |
+| 《好好学习：个人知识管理精进指南（升级版）》 | 将「行动改变」而非阅读完成作为学习标准；启发了 `teach-me` 的讲回、微实验和反馈，以及 `study-review` 用结果检验学习内容是否真正用起来，再校正学习设计。           |
+| 《好好思考（全新升级版）》          | 将基本问题、最小必要知识、概念边界与对知识的诚实带入流程；它们成为 `to-sop` 的范围设计、`learn-modeling` 对原材料与补充解释的区分，以及 `teach-me` 的概念校准。 |
 
 这些方法被分别编译为 [教学闭环](skills/learning/teach-me/references/learning-loop.md) 与 [学习效果审查依据](skills/learning/study-review/references/learning-effect-review.md) 中的可执行判断。它们不替代原书，也不以书中的方法代替查证最新事实或专业规范。
 
@@ -29,13 +29,15 @@ npx skills@latest add mattpocock/skills
 npx skills@latest add MingStudentSE/skill-for-real-learner
 ```
 
-安装器会让你选择目标 Agent 和要加入的 skill。`grilling` 用于澄清学习决策，`teach` 用于讲解与练习；`strategyfinder` 会按决策卡需要调用 `research` 核实外部事实，或调用 `prototype` 设计最低成本的验证实验。安装与更新方式以 [上游说明](https://github.com/mattpocock/skills#installation-30-second-setup) 为准。
-
 ## Start here
 
-### Recommended path
+### `/ask-ming`：显式导航入口
 
-当你要开始一个新阶段、重新分配学习精力，或希望这次学习能留下可复用的计划时，从下面三个入口中选一个：
+不知道从哪个学习 skill 开始时，先手动运行 `/ask-ming`。它只会推荐下一条由你输入的 `/skill` 命令，并说明应读取或交付哪个工件；不会自动启动流程、写入文件或替你作出学习取舍。
+
+### 推荐调用顺序
+
+当你要开始一个新阶段、重新分配学习精力，或希望这次学习能留下可复用的计划时，从下面三个入口中选一个。这是一条推荐的完整学习路径，不表示 skill 会自动跳转；每一步仍由你手动运行。
 
 ```text
 grill-me / grill-with-learn / strategyfinder
@@ -52,56 +54,61 @@ grill-me / grill-with-learn / strategyfinder
 - `/grill-me`：无状态访谈。聊完即结束，不留下文件。
 - `/grill-with-learn`：有状态的学习访谈。它会沉淀学习笔记，供后续学习流程复用。
 - `/strategyfinder`：长期战略入口。适合决定有限精力该投入、暂停或放弃什么；它维护唯一的 `STRATEGY-MAP.md`，不替代日常学习计划。
-
-接着，`/to-sop` 把共识变成一个稳定阶段的学习方法，`/to-task` 把它转成当前月、周、日或单次任务，`/teach-me` 围绕真实问题开展讲解、讲回和微实验。到约定检查点后，`/study-review` 审查学习内容是否已经改变真实判断或行动，再以结果校正学习模型/课程、SOP 或任务。
+- `/to-sop`：把已经澄清的学习方向整理为当前阶段可长期执行的 SOP，明确目标能力、学习方法、资源策略与复盘检查点。
+- `/to-task`：根据 SOP 规划当前一批可执行的学习任务，为每项任务写清证据、练习、反馈、投入与完成条件。
+- `/teach-me`：围绕真实问题开展跨会话教学，通过讲解、讲回、练习与微实验，把知识转成可观察的行动证据。
+- `/study-review`：在持续学习一段时间、积累了真实练习或任务证据后调用，而不是每次学习后都调用；它检验学习是否改善了解释、判断或行动，定位课程、任务、SOP 或长期战略假设的问题，并为调整后续任务、SOP 和必要时重审战略提供依据。
 
 ### Shortest path
 
 当你只想马上把一个真实问题学会，不需要先建立长期计划时：
 
 ```text
-grill-me / grill-with-learn
-             ↓
-          teach-me
-             ↓
-        study-review
+/grill-me → /learn-one-concept
 ```
 
-先选 `/grill-me` 或 `/grill-with-learn` 澄清问题，再用 `/teach-me <想学的能力、概念或真实问题>` 开始一轮互动教学。`/study-review` 留到有意义的检查点：它评估的是独立解释、实际产物或新情境迁移，不是「感觉会了」。
+先运行 `/grill-me`，把现实问题或好奇点收敛为一个要解决的概念；再运行 `/learn-one-concept <概念>`，通过讲回、判断或微行动完成一个轻量学习回合。它适合立即学懂一个点，不替代跨会话课程或阶段性学习复盘。
 
 ### Learning from a source
 
-书、文章、视频或课程讲义需要先被看懂时，可以在任一路径中插入：
+书、文章、视频或课程讲义需要先被看懂时，可手动调用 `/learn-modeling`。它也是可复用的 model-invoked 能力：`teach-me` 在当前教学确实需要材料结构时，可用它建立最小必要范围的 `learning-models/<date>-<topic>.md`，再继续教学。
 
-```text
-指定材料 → learn-modeling → teach-me
-```
+`/learn-modeling` 只解释材料，不代替教学、练习、任务规划或掌握评估。
 
-`/learn-modeling` 会按原材料的章节建立学习模型，标出核心概念、关系、前置知识、难点与来源位置。它只解释材料，不代替教学、练习、任务规划或掌握评估。
+## Invocation and ownership
 
-## What each skill owns
+### User-invoked
 
-路线中的 `strategyfinder`、`grill-with-learn`、`to-sop`、`to-task`、`teach-me` 与 `study-review` 都由学习者主动调用；它们编排流程，但不会在后台替你启动新的学习计划。`learn-modeling` 既可直接调用，也可在引入指定材料时供 `teach` 使用。
+这些流程只能由学习者手动选择。它们通过工件交接，不会彼此自动启动。
 
-| Skill | 何时使用 | 产出或下一步 |
+| Skill                                                             | 何时使用                 | 产出                               |
+| ----------------------------------------------------------------- | -------------------- | -------------------------------- |
+| [`ask-ming`](skills/learning/ask-ming/SKILL.md)                   | 不确定下一步该用哪个学习 skill   | 一条建议手动执行的命令与工件说明                 |
+| [`strategyfinder`](skills/learning/strategyfinder/SKILL.md)       | 审视长期方向、精力配置和重大取舍     | `STRATEGY-MAP.md` 与决策卡           |
+| [`grill-with-learn`](skills/learning/grill-with-learn/SKILL.md)   | 澄清学习使命或当前学习决策        | 已达成的学习共识，可作为其他工件的输入              |
+| [`learn-one-concept`](skills/learning/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念卡               |
+| [`to-sop`](skills/learning/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |
+| [`to-task`](skills/learning/to-task/SKILL.md)                     | 已有 SOP，需要规划当前一批行动    | `TASKS.md`；第一项任务可立即开始            |
+| [`teach-me`](skills/learning/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | 课程、参考资料、学习记录与本轮练习证据              |
+| [`study-review`](skills/learning/study-review/SKILL.md)           | 到达检查点，审核学习内容是否真的产生效果 | `reviews/` 中的效果证据、诊断与校正动作        |
+
+### Model-invoked（也可手动调用）
+
+这两个能力可由模型在当前学习流程需要时复用，学习者也可以直接运行它们。
+
+| Skill | 何时使用 | 产出 |
 | --- | --- | --- |
-| [`strategyfinder`](skills/learning/strategyfinder/SKILL.md) | 审视长期方向、精力配置和重大取舍 | `STRATEGY-MAP.md` 与决策卡；未知项可调用 `research` 或 `prototype` 验证，路线清晰后交给 `to-sop` 或 `to-task` |
-| [`grill-with-learn`](skills/learning/grill-with-learn/SKILL.md) | 澄清学习使命或当前学习决策 | 已达成的学习共识，供 `to-sop` 或 `teach-me` 使用 |
-| [`learn-modeling`](skills/learning/learn-modeling/SKILL.md) | 阅读指定材料并建立学习者可读的内容模型 | `learning-models/` 中的材料模型，供教学使用 |
-| [`concept-card`](skills/learning/concept-card/SKILL.md) | 将笔记中点名的一个概念转成可回溯、可判断的概念卡 | 对话中的 Markdown 卡片；仅在明确指定时保存 |
-| [`to-sop`](skills/learning/to-sop/SKILL.md) | 已有清晰方向，需要稳定的阶段方法 | `MISSION.md` 与 `LEARNING-SOP.md` |
-| [`to-task`](skills/learning/to-task/SKILL.md) | 已有 SOP，需要规划当前一批行动 | `TASKS.md`；第一项任务可立即开始 |
-| [`teach-me`](skills/learning/teach-me/SKILL.md) | 用真实问题启动较长、跨会话的课程学习 | 维护 `teach` 教学工作区：课程 HTML、参考资料、学习记录与本轮练习证据 |
-| [`study-review`](skills/learning/study-review/SKILL.md) | 到达检查点，审核学习内容是否真的产生效果 | `reviews/` 中的学习效果证据、内容/SOP/TASKS 诊断与校正动作 |
+| [`learn-modeling`](skills/learning/learn-modeling/SKILL.md) | 阅读指定材料并建立学习者可读的内容模型 | `learning-models/` 中的材料模型 |
+| [`concept-card`](skills/learning/concept-card/SKILL.md) | 将笔记中点名的一个概念转成可回溯、可判断的概念卡 | Markdown 概念卡；仅在明确要求保存时写入 |
 
 ## The evidence loop
 
-学习不是直线，也不是「完成一门课」后自动结束。每次复盘先检验学习内容产生的实际效果，再让证据决定校正什么：
+学习不是直线，也不是「完成一门课」后自动结束。每次复盘先检验学习内容产生的实际效果，再用证据记录需要校正的假设和下一步：
 
 ```text
-学习模型 / 课程 / 任务 → 独立解释 / 真实产物 / 新情境迁移 → study-review
+学习模型 / 课程 / 任务 → 独立解释 / 真实产物 / 新情境迁移 → 学习效果审查
                                                                   ↓
-                  内容失配 → learn-modeling / teach-me    任务失配 → to-task    方法失配 → to-sop
+                                                       校正假设与下一步
 ```
 
 长期战略只在出现影响总体取舍的新证据时，才在下一次 `/strategyfinder` 中重新打开；一次表现波动不会自动改写战略。

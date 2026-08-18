@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask Ming"
+  short_description: "选择下一步学习 skill 或流程"
+policy:
+  allow_implicit_invocation: false

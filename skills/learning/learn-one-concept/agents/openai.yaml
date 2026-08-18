@@ -1,0 +1,5 @@
+interface:
+  display_name: "学一个概念"
+  short_description: "围绕一个概念开展轻量互动学习"
+policy:
+  allow_implicit_invocation: false

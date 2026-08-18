@@ -1,0 +1,5 @@
+interface:
+  display_name: "互动教学"
+  short_description: "围绕真实问题开展持续学习"
+policy:
+  allow_implicit_invocation: false
