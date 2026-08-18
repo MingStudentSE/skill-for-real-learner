@@ -2,13 +2,19 @@
 
 ## 结构
 
-本仓库发布的学习 skill 都直接位于 `skills/<skill-name>/`，保持该目录平铺。每个 skill 以 `SKILL.md` 为入口，并在需要时携带 `agents/openai.yaml`、`references/` 或 `evals/`。上游依赖（如 `grilling`、`teach`、`research`、`prototype`）由使用者另行安装，不属于本仓库的 skill 目录。
+本仓库发布的学习 skill 都直接位于 `skills/<skill-name>/`，保持该目录平铺。每个 skill 以 `SKILL.md` 为入口，并在需要时携带 `agents/openai.yaml`、`references/` 或 `evals/`。上游依赖 `grilling`、`research` 与 `prototype` 由使用者另行安装，不属于本仓库的 skill 目录。`teach-core` 是唯一例外：它完整镜像 Matt Pocock 上游 `teach` skill，作为 `teach-me` 可调用的 model-invoked 基底。
 
 `skills/README.md` 是 skill 清单及调用分类的权威来源；`skills/ARTIFACTS.md` 只定义跨流程共享工件的边界；`CONTEXT.md` 定义学习领域术语。各 skill 创建文件的具体格式保留在该 skill 自己的 `references/` 中，除非该格式明确继承自上游依赖。
 
 每个本仓库发布的 skill 都有一页面向人的文档，路径为 `docs/<skill-name>.md`；`docs/README.md` 是文档索引。文档帮助人判断何时使用，而不是复制 `SKILL.md` 的运行步骤或安装命令。
 
 `.obsidian/`、`reference/`、`skills/matt/` 和 `.DS_Store` 都是本地内容，不要加入版本控制。
+
+## 维护 `teach-core`
+
+更新 `teach-core` 时，先查看 [Matt Pocock Skills](https://github.com/mattpocock/skills) 上游仓库当前的 `teach` skill，再完整同步 `SKILL.md`、`MISSION-FORMAT.md`、`RESOURCES-FORMAT.md`、`LEARNING-RECORD-FORMAT.md`、`GLOSSARY-FORMAT.md` 与 `agents/openai.yaml`。
+
+同步后只保留以下本仓库差异：目录和 frontmatter `name` 改为 `teach-core`；删除 `disable-model-invocation: true`；删除 `policy.allow_implicit_invocation: false`；界面名称改为 `Teach Core`。`teach-core` 不承载本仓库自己的教学补丁；所有增量行为只写在 `teach-me`。完成时逐文件比较上游，确认没有其他正文或格式差异。
 
 ## 维护 skill 清单
 

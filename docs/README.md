@@ -21,6 +21,7 @@
 
 | Skill | 适合解决的问题 | 文档 |
 | --- | --- | --- |
+| `teach-core` | 提供原版、完整的有状态教学工作区 | [阅读](teach-core.md) |
 | `learn-modeling` | 将指定材料、章节或概念变成可学习、可回溯的模型笔记 | [阅读](learn-modeling.md) |
 
-上游的 `grilling`、`teach`、`research` 与 `prototype` 是另行安装的基础能力；本目录只记录本仓库发布的 9 个 learning skill。
+上游的 `grilling`、`research` 与 `prototype` 是另行安装的基础能力；原版 `teach` 已镜像为 `teach-core`。本目录记录本仓库发布的 10 个 learning skill。

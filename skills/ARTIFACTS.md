@@ -2,13 +2,13 @@
 
 这些是共享状态，不是另一套课程。每个工件都应足够简短，以支持下一次决策。
 
-本文件是完整学习套件的工件总览，不是单个 skill 的运行时依赖。每个创建工件的 skill 都在自己的 `references/` 中携带所需格式。
+本文件是完整学习套件的工件总览，不是单个 skill 的运行时依赖。每个创建工件的 skill 都随自身目录携带所需格式；`teach-core` 保持上游文件布局，其余格式通常位于各自的 `references/`。
 
 ## `learning-models/<date>-<topic>.md`
 
 `learn-modeling` 用学习模型保存一个指定知识范围的可学习版本。材料、章节或多概念范围使用材料模型，保持来源顺序并记录内容总览、核心与延伸、前置知识、概念关系、难点和覆盖范围；单个已点名概念使用概念模型，记录基本问题、定义、机制、边界、必要关系、正反例和应用假设。两者都区分原材料内容、补充解释、学习者假设与未知，并保留来源导航。
 
-同一范围只建立一种模型，不同时产出重复笔记。学习模型不是学习过程记录、任务计划、学习复盘或掌握证明；`teach` 使用它来讲解、提问和练习。完整格式与边界见 [`learn-modeling/references/MODEL-FORMAT.md`](learn-modeling/references/MODEL-FORMAT.md)。
+同一范围只建立一种模型，不同时产出重复笔记。学习模型不是学习过程记录、任务计划、学习复盘或掌握证明；`teach-me` 可以使用它来讲解、提问和练习。完整格式与边界见 [`learn-modeling/references/MODEL-FORMAT.md`](learn-modeling/references/MODEL-FORMAT.md)。
 
 ## `STRATEGY-MAP.md` 与 `strategy-decisions/`
 
@@ -17,6 +17,12 @@
 完整格式与状态规则见 [`strategyfinder/references/map-format.md`](strategyfinder/references/map-format.md)。只有在学习者主动沟通并确认原战略被推翻时，才修改总体战略本身。
 
 对于长期方向、重大精力配置或高不可逆选择，总图还保留不失败底座和当前复利假设的低分辨率摘要；相关决策卡记录护栏、支持证据、待验证条件与反证信号。它们只服务战略取舍，不代替阶段 SOP、任务计划或对生活其他领域的管理。
+
+## `MISSION.md` 与课程工件
+
+`teach-core` 定义原版教学工作区：`MISSION.md` 保存学习的现实原因，`RESOURCES.md` 保存可信知识来源与社群，`lessons/` 保存课程，`reference/` 与 `GLOSSARY.md` 保存可回查知识，`learning-records/` 保存会影响后续教学的理解证据，`NOTES.md` 与 `assets/` 保存教学偏好、工作笔记和复用组件。具体格式随 [`teach-core`](teach-core/SKILL.md) 发布。
+
+`teach-me` 调用这一完整基底并增加学习闭环，不复制或另定课程工件格式。`to-sop` 可以创建或更新同一份 `MISSION.md`，现实目标变化时必须先由学习者确认。
 
 ## `LEARNING-SOP.md`
 
@@ -30,4 +36,4 @@
 
 复盘报告先定义要证明的解释、判断或行动，再以统一的证据项目记录已有或现场收集的独立表现、介入程度、逐项结论与证据边界。有既有学习设计时，每个相关工件都记录为保留、已确认并更新或交给后续决定；使命/战略重审信号只写入复盘，对应工件保持原状。没有既有设计时只记录当前缺口与下一项最小行动。格式由 [`study-review`](study-review/SKILL.md) 随 skill 一起发布，见 [复盘格式](study-review/references/review-format.md)。
 
-只有当复盘确认了持久理解、纠正了误解，或发现会影响后续教学的变化时，才在 `learning-records/` 中另建记录。该记录使用 `teach` 所定义的格式。
+只有当复盘确认了持久理解、纠正了误解，或发现会影响后续教学的变化时，才在 `learning-records/` 中另建记录。该记录使用 `teach-core` 所定义的格式。

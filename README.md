@@ -2,7 +2,7 @@
 
 一组把「我想学什么」变成可观察能力证据的 Agent Skills。它们不替学习者决定人生，也不把课程完成或投入时长误当成掌握；每个 skill 都只负责学习过程中的一个清晰环节，因此可以按你的现实问题自由组合。
 
-本仓库借鉴并依赖 [Matt Pocock 的 Skills for Real Engineers](https://github.com/mattpocock/skills) 中的 `grilling`、`teach`、`research` 与 `prototype`：用访谈对齐真正的问题，用教学和练习形成反馈，用研究核实外部事实，并以低成本原型验证关键假设。学习流程本身保留在你自己的工作区，随时可以阅读、调整和扩展。
+本仓库借鉴 [Matt Pocock 的 Skills for Real Engineers](https://github.com/mattpocock/skills)：依赖其中的 `grilling`、`research` 与 `prototype`，并把原版 `teach` 镜像为可被 `teach-me` 调用的 `teach-core`。它们分别用访谈对齐真正的问题、用教学和练习形成反馈、用研究核实外部事实，并以低成本原型验证关键假设。学习流程本身保留在你自己的工作区，随时可以阅读、调整和扩展。
 
 ## Design sources
 
@@ -17,7 +17,7 @@
 
 ## Installation
 
-先安装上游的基础能力。你可以直接安装完整套件；若在安装器中只选择部分 skill，至少选择 `grilling`、`teach`、`research` 与 `prototype`：
+先安装上游的基础能力。你可以直接安装完整套件；若在安装器中只选择部分 skill，至少选择 `grilling`、`research` 与 `prototype`。原版 `teach` 已由本仓库的 `teach-core` 镜像，不需要作为运行依赖另行选择：
 
 ```bash
 npx skills@latest add mattpocock/skills
@@ -100,6 +100,7 @@ grill-me / grill-with-learn / strategyfinder
 
 | Skill | 何时使用 | 产出 |
 | --- | --- | --- |
+| [`teach-core`](skills/teach-core/SKILL.md) | 为 `teach-me` 提供原版、完整的有状态教学工作区 | `MISSION.md`、课程、资源、参考资料、术语表与学习记录 |
 | [`learn-modeling`](skills/learn-modeling/SKILL.md) | 将指定材料、章节或概念建成学习者可读的模型笔记 | `learning-models/` 中的材料模型或概念模型 |
 
 ## The evidence loop
@@ -122,6 +123,7 @@ grill-me / grill-with-learn / strategyfinder
 - `MISSION.md` 与 `LEARNING-SOP.md`：学习的现实原因、范围、目标能力、方法和检查点。
 - `TASKS.md`：当前批次的适应性任务。
 - `learning-models/`：按指定材料、章节或概念建立的内容模型，不是学习证据。
+- `RESOURCES.md`、`lessons/`、`reference/`、`GLOSSARY.md`、`NOTES.md` 与 `assets/`：由 `teach-core` 维护的教学来源、课程、参考知识、术语、笔记与复用组件。
 - `reviews/`：检查点的学习效果证据、设计诊断与校正动作。
 - `learning-records/`：只记录会影响后续教学的持久理解、纠正或真实证据。
 
