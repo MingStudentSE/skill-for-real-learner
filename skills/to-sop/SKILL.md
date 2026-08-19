@@ -13,13 +13,13 @@ argument-hint: "根据当前学习讨论生成 SOP"
 
 ## 读取学习状态
 
-阅读当前对话，以及已有的 `STRATEGY-MAP.md`、已关闭的 `strategy-decisions/`、`MISSION.md`、`CONTEXT.md`、`RESOURCES.md`、`LEARNING-SOP.md` 和相关 `learning-records/`。其中的术语与已展示的基础就是起点，不要让学习者重复它们。
+阅读当前对话，以及已有的 `STRATEGY-MAP.md`、已关闭的 `strategy-decisions/`、`MISSION.md`、`RESOURCES.md`、`LEARNING-SOP.md` 和相关 `learning-records/`；仅在工作区存在 `CONTEXT.md` 时读取它。其中的术语与已展示的基础就是起点，不要让学习者重复它们。
 
 现实目标的变化属于学习使命变化，不能静默修改。替换 `MISSION.md` 前先与学习者确认。
 
 ## 创建使命指南针
 
-如果缺少 `MISSION.md`，按 [`teach-core` 的使命格式](../teach-core/MISSION-FORMAT.md)创建。它只记录学习者的现实原因、可观察的成功标准、约束与当前不在范围内的事项。学习使命比一个学习阶段更广、更持久；它必须服务 `STRATEGY-MAP.md` 中已经确认的总体战略，不能静默重写总体战略。
+如果缺少 `MISSION.md`，按 [`teach-core` 的使命格式](../teach-core/MISSION-FORMAT.md)创建。它只记录学习者的现实原因、可观察的成功标准、约束与当前不在范围内的事项。学习使命比一个学习阶段更广、更持久；工作区存在 `STRATEGY-MAP.md` 时，它必须服务其中已经确认的总体战略，不能静默重写总体战略。
 
 ## 编写学习 SOP
 
