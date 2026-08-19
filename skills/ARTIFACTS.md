@@ -30,7 +30,7 @@
 
 ## `TASKS.md`
 
-该文件保存当前、可适应的任务计划。月计划定义里程碑，周计划选择当前工作，日计划明确下一步练习，单次任务则是最小可行动单元。只有在新证据使其有价值时，才细化下一个时间范围。格式由 [`to-task`](to-task/SKILL.md) 随 skill 一起发布，见 [任务格式](to-task/references/task-format.md)。
+该文件保存当前、可适应的任务计划及其规划依据：优先链接 `LEARNING-SOP.md`；没有 SOP 但当前任务已足够明确时，记录任务简报中的目标、约束、已知起点、未知与假设。月计划定义里程碑，周计划选择当前工作，日计划明确下一步练习，单次任务则是最小可行动单元。只有在新证据使其有价值时，才细化下一个时间范围。格式由 [`to-task`](to-task/SKILL.md) 随 skill 一起发布，见 [任务格式](to-task/references/task-format.md)。
 
 ## `reviews/<date>-<checkpoint>.md`
 

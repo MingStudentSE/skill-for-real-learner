@@ -39,25 +39,26 @@ npx skills@latest add MingStudentSE/skill-for-real-learner
 
 ### 推荐调用顺序
 
-当你要开始一个新阶段、重新分配学习精力，或希望这次学习能留下可复用的计划时，从下面三个入口中选一个。这是一条推荐的完整学习路径，不表示 skill 会自动跳转；每一步仍由你手动运行。
+当你要开始一个新阶段、重新分配学习精力，或希望这次学习能留下可复用的计划时，从下面三个入口中选一个。稳定阶段的推荐路径经过 `/to-sop`；当当前任务简报已具备问题、时间或约束，以及已知起点或证据缺口时，短期行动可以直接进入 `/to-task`。这不表示 skill 会自动跳转；每一步仍由你手动运行。
 
 ```text
 grill-me / grill-with-learn / strategyfinder
                   ↓
-                to-sop
-                  ↓
-               to-task
-                  ↓
-               teach-me
-                  ↓
-             study-review
+                to-sop ────────────┐
+                                   ↓
+明确的当前任务简报
+（问题、时间／约束、起点／证据缺口） ──→ to-task
+                                   ↓
+                                teach-me
+                                   ↓
+                              study-review
 ```
 
 - `/grill-me`：无状态访谈。聊完即结束，不留下文件。
-- `/grill-with-learn`：有状态的学习访谈。它会沉淀学习笔记，供后续学习流程复用。
+- `/grill-with-learn`：学习质询入口。它通过 `grilling` 澄清学习使命或当前决策；只有指定材料本身阻塞判断时，才可复用 `learn-modeling` 建立学习模型。
 - `/strategyfinder`：长期战略入口。适合决定有限精力该投入、暂停或放弃什么；它维护唯一的 `STRATEGY-MAP.md`，不替代日常学习计划。
 - `/to-sop`：把已经澄清的学习方向整理为当前阶段可长期执行的 SOP，明确目标能力、学习方法、资源策略与复盘检查点。
-- `/to-task`：根据 SOP 规划当前一批可执行的学习任务，为每项任务写清证据、练习、反馈、投入与完成条件。
+- `/to-task`：优先根据 SOP 规划当前一批可执行的学习任务；当前对话已形成包含问题、时间或约束、起点或证据缺口的任务简报时，也可直接规划。每项任务写清证据、练习、反馈、投入与完成条件。
 - `/teach-me`：围绕真实问题开展跨会话教学，通过讲解、讲回、练习与微实验，把知识转成可观察的行动证据。
 - `/study-review`：先确定要证明的解释、判断或行动，再盘点已有作品与反馈；证据不足时通过无提示展示和苏格拉底式追问现场取证。它既能独立检验一个概念，也能在学习检查点校正课程、SOP 与任务，并记录需要重审的使命或战略信号。
 
@@ -87,10 +88,10 @@ grill-me / grill-with-learn / strategyfinder
 | ----------------------------------------------------------------- | -------------------- | -------------------------------- |
 | [`ask-ming`](skills/ask-ming/SKILL.md)                   | 不确定下一步该用哪个学习 skill   | 一条建议手动执行的命令与工件说明                 |
 | [`strategyfinder`](skills/strategyfinder/SKILL.md)       | 审视长期方向、精力配置和重大取舍     | `STRATEGY-MAP.md` 与决策卡           |
-| [`grill-with-learn`](skills/grill-with-learn/SKILL.md)   | 澄清学习使命或当前学习决策        | 已达成的学习共识，可作为其他工件的输入              |
+| [`grill-with-learn`](skills/grill-with-learn/SKILL.md)   | 澄清学习使命或当前学习决策        | 已达成的学习共识；指定材料需要建模时，可建立 `learning-models/` 中的模型 |
 | [`learn-one-concept`](skills/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念模型              |
 | [`to-sop`](skills/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |
-| [`to-task`](skills/to-task/SKILL.md)                     | 已有 SOP，需要规划当前一批行动    | `TASKS.md`；第一项任务可立即开始            |
+| [`to-task`](skills/to-task/SKILL.md)                     | 当前任务简报已具备问题、时间或约束、起点或证据缺口，需要规划当前一批行动；有 SOP 时优先读取 | `TASKS.md`；第一项任务可立即开始，并记录规划依据 |
 | [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | 课程、参考资料、学习记录与本轮练习证据              |
 | [`study-review`](skills/study-review/SKILL.md)           | 检验一个概念/能力，或在检查点审核学习效果 | 证据化结论、工件处理决定与 `reviews/` 复盘 |
 
@@ -121,7 +122,7 @@ grill-me / grill-with-learn / strategyfinder
 
 - `STRATEGY-MAP.md` 与 `strategy-decisions/`：长期战略与关键取舍。
 - `MISSION.md` 与 `LEARNING-SOP.md`：学习的现实原因、范围、目标能力、方法和检查点。
-- `TASKS.md`：当前批次的适应性任务。
+- `TASKS.md`：当前批次的适应性任务及其规划依据。
 - `learning-models/`：按指定材料、章节或概念建立的内容模型，不是学习证据。
 - `RESOURCES.md`、`lessons/`、`reference/`、`GLOSSARY.md`、`NOTES.md` 与 `assets/`：由 `teach-core` 维护的教学来源、课程、参考知识、术语、笔记与复用组件。
 - `reviews/`：检查点的学习效果证据、设计诊断与校正动作。
