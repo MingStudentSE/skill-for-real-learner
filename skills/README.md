@@ -13,9 +13,9 @@
 - [to-task](to-task/SKILL.md)：依据学习 SOP 或已具备问题、时间或约束、起点或证据缺口的当前任务简报，规划下一批适应性学习任务，输出 `TASKS.md`。
 - [study-review](study-review/SKILL.md)：根据已有作品或现场无提示展示检验掌握，输出证据化结论，并据此校正课程、SOP、任务或记录使命/战略信号。
 
-## Model-invoked（也可手动调用）
+## Model-invoked
 
-以下能力可被当前学习流程复用，也可由学习者直接调用：
+以下能力可被当前学习流程复用：
 
 - [teach-core](teach-core/SKILL.md)：完整镜像上游 `teach`，解除隐式调用限制后作为 `teach-me` 的基础教学能力。
 - [learn-modeling](learn-modeling/SKILL.md)：把指定材料、章节、笔记片段或单个概念建成学习者能读懂的模型笔记，输出 `learning-models/` 中的材料模型或概念模型。

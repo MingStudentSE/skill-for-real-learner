@@ -2,7 +2,7 @@
 
 一组把「我想学什么」变成可观察能力证据的 Agent Skills。它们不替学习者决定人生，也不把课程完成或投入时长误当成掌握；每个 skill 都只负责学习过程中的一个清晰环节，因此可以按你的现实问题自由组合。
 
-本仓库借鉴 [Matt Pocock 的 Skills for Real Engineers](https://github.com/mattpocock/skills)：依赖其中的 `grilling`、`research` 与 `prototype`，并把原版 `teach` 镜像为可被 `teach-me` 调用的 `teach-core`。它们分别用访谈对齐真正的问题、用教学和练习形成反馈、用研究核实外部事实，并以低成本原型验证关键假设。学习流程本身保留在你自己的工作区，随时可以阅读、调整和扩展。
+本仓库借鉴 [Matt Pocock 的 Skills for Real Engineers](https://github.com/mattpocock/skills)：依赖其中的 `grill-me`、`grilling`、`research` 与 `prototype`，并把原版 `teach` 镜像为可被 `teach-me` 调用的 `teach-core`。它们分别用短访谈或持续追问对齐真正的问题、用教学和练习形成反馈、用研究核实外部事实，并以低成本原型验证关键假设。学习流程本身保留在你自己的工作区，随时可以阅读、调整和扩展。
 
 ## Design sources
 
@@ -17,7 +17,7 @@
 
 ## Installation
 
-先安装上游的基础能力。你可以直接安装完整套件；若在安装器中只选择部分 skill，至少选择 `grilling`、`research` 与 `prototype`。原版 `teach` 已由本仓库的 `teach-core` 镜像，不需要作为运行依赖另行选择：
+先安装上游的基础能力。你可以直接安装完整套件；若在安装器中只选择部分 skill，至少选择 `grill-me`、`grilling`、`research` 与 `prototype`：
 
 ```bash
 npx skills@latest add mattpocock/skills
@@ -27,6 +27,12 @@ npx skills@latest add mattpocock/skills
 
 ```bash
 npx skills@latest add MingStudentSE/skill-for-real-learner
+```
+
+也可以把下面这段提示词直接发给你的 agent：
+
+```text
+请为当前环境安装 Skills for Real Learners。先执行 `npx skills@latest add mattpocock/skills`，在交互式选择器中选择 `grill-me`、`grilling`、`research` 与 `prototype`。完成后执行 `npx skills@latest add MingStudentSE/skill-for-real-learner`。请按此顺序完成安装。
 ```
 
 每个入口的面向人说明见[学习 skill 文档](docs/README.md)：它们说明何时使用、可观察的有效信号和与其他入口的边界，而不复述运行步骤。
@@ -95,9 +101,9 @@ grill-me / grill-with-learn / strategyfinder
 | [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | 课程、参考资料、学习记录与本轮练习证据              |
 | [`study-review`](skills/study-review/SKILL.md)           | 检验一个概念/能力，或在检查点审核学习效果 | 证据化结论、工件处理决定与 `reviews/` 复盘 |
 
-### Model-invoked（也可手动调用）
+### Model-invoked
 
-这一能力可由模型在当前学习流程需要时复用，学习者也可以直接运行。
+以下能力可由模型在当前学习流程需要时复用。
 
 | Skill | 何时使用 | 产出 |
 | --- | --- | --- |

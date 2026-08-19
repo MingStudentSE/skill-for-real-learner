@@ -2,7 +2,7 @@
 
 这些页面面向选择和使用学习 skill 的人。它们解释每个入口解决什么问题、何时使用、成功时会留下什么可观察信号，以及它与其他入口的边界；具体运行步骤见 [skills 索引及各自的 `SKILL.md`](../skills/README.md)。
 
-本仓库的 skill 分为两类：**user-invoked** 入口只能由学习者手动输入命令；**model-invoked** 能力既可手动输入，也可在当前学习流程确有需要时被复用。页面不替你启动下一步。
+本仓库的 skill 分为两类：**user-invoked** 入口只能由学习者手动输入命令；**model-invoked** 能力可在当前学习流程确有需要时被复用。`teach-core` 作为上游镜像保留，不设面向人的说明页。页面不替你启动下一步。
 
 ## User-invoked
 
@@ -17,11 +17,10 @@
 | `to-task` | 将 SOP 或具备问题、时间／约束、起点／证据缺口的当前任务简报变成当前一批可执行任务 | [阅读](to-task.md) |
 | `study-review` | 根据已有或现场表现检验概念、能力与学习效果 | [阅读](study-review.md) |
 
-## Model-invoked（也可手动调用）
+## Model-invoked
 
 | Skill | 适合解决的问题 | 文档 |
 | --- | --- | --- |
-| `teach-core` | 提供原版、完整的有状态教学工作区 | [阅读](teach-core.md) |
 | `learn-modeling` | 将指定材料、章节或概念变成可学习、可回溯的模型笔记 | [阅读](learn-modeling.md) |
 
-上游的 `grilling`、`research` 与 `prototype` 是另行安装的基础能力；原版 `teach` 已镜像为 `teach-core`。本目录记录本仓库发布的 10 个 learning skill。
+上游依赖及其安装顺序见[根 README 的 Installation](../README.md#installation)；原版 `teach` 已镜像为 `teach-core`。本目录记录本仓库面向学习者的 9 个 skill。
