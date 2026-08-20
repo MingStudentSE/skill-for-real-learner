@@ -12,7 +12,7 @@
 | `strategyfinder` | 长期方向、精力配置或重大取舍 | [阅读](strategyfinder.md) |
 | `grill-with-learn` | 学习使命或当前决策仍说不清 | [阅读](grill-with-learn.md) |
 | `learn-one-concept` | 想快速学懂一个已点名的概念 | [阅读](learn-one-concept.md) |
-| `teach-me` | 围绕真实问题开展持续、跨会话教学 | [阅读](teach-me.md) |
+| `teach-me` | 围绕真实问题持续教学，并按学习画像调整课程范围与难度 | [阅读](teach-me.md) |
 | `to-sop` | 将已澄清的方向变成稳定阶段的学习方法 | [阅读](to-sop.md) |
 | `to-task` | 将 SOP 或具备问题、时间／约束、起点／证据缺口的当前任务简报变成当前一批可执行任务 | [阅读](to-task.md) |
 | `study-review` | 根据已有或现场表现检验概念、能力与学习效果 | [阅读](study-review.md) |

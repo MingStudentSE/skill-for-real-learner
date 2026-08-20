@@ -6,14 +6,15 @@
 
 ## Design sources
 
-本仓库的学习方法还主要受成甲老师两本书启发；它们决定的是**如何学习和验证**，不是替代某个领域的一手资料或专业判断。
+本仓库的学习方法还受以下材料启发；它们决定的是**如何学习和验证**，不是替代某个领域的一手资料或专业判断。
 
-| 书                      | 对 Skill 设计的贡献                                                                                       |
+| 材料                      | 对 Skill 设计的贡献                                                                                       |
 | ---------------------- | --------------------------------------------------------------------------------------------------- |
 | 《好好学习：个人知识管理精进指南（升级版）》 | 将「行动改变」而非阅读完成作为学习标准；启发了 `teach-me` 的讲回、微实验和反馈，以及 `study-review` 用结果检验学习内容是否真正用起来，再校正学习设计。           |
 | 《好好思考（全新升级版）》          | 将基本问题、最小必要知识、概念边界与对知识的诚实带入流程；它们成为 `to-sop` 的范围设计、`learn-modeling` 对原材料与补充解释的区分，以及 `teach-me` 的概念校准。 |
+| [Eero Alvar: How I Use AI to Learn Things](https://www.youtube.com/watch?v=kzcI5F4tGiU) | 将教学路径放在学习者当前理解的边缘：跳过已掌握内容，先补不可理解的前置断层，再用持续反馈校准学习画像、课程范围与难度。 |
 
-这些方法被分别编译为 [教学闭环](skills/teach-me/references/learning-loop.md) 与 [学习效果审查依据](skills/study-review/references/learning-effect-review.md) 中的可执行判断。它们不替代原书，也不以书中的方法代替查证最新事实或专业规范。
+这些方法被编译为 [教学闭环](skills/teach-me/references/learning-loop.md)、[学习画像格式](skills/teach-me/references/LEARNER-PROFILE-FORMAT.md) 与 [学习效果审查依据](skills/study-review/references/learning-effect-review.md) 中的可执行判断。这些执行规则不替代设计来源，也不以一般学习方法代替查证最新事实或专业规范。
 
 ## Installation
 
@@ -65,7 +66,7 @@ grill-me / grill-with-learn / strategyfinder
 - `/strategyfinder`：长期战略入口。适合决定有限精力该投入、暂停或放弃什么；它维护唯一的 `STRATEGY-MAP.md`，不替代日常学习计划。
 - `/to-sop`：把已经澄清的学习方向整理为当前阶段可长期执行的 SOP，明确目标能力、学习方法、资源策略与复盘检查点。
 - `/to-task`：优先根据 SOP 规划当前一批可执行的学习任务；当前对话已形成包含问题、时间或约束、起点或证据缺口的任务简报时，也可直接规划。每项任务写清证据、练习、反馈、投入与完成条件。
-- `/teach-me`：围绕真实问题开展跨会话教学，通过讲解、讲回、练习与微实验，把知识转成可观察的行动证据。
+- `/teach-me`：围绕真实问题开展跨会话教学，持续记录学习画像，将下一个学习块放在当前理解边缘，再通过讲回、练习与微实验校准难度并产生行动证据。
 - `/study-review`：先确定要证明的解释、判断或行动，再盘点已有作品与反馈；证据不足时通过无提示展示和苏格拉底式追问现场取证。它既能独立检验一个概念，也能在学习检查点校正课程、SOP 与任务，并记录需要重审的使命或战略信号。
 
 ### Shortest path
@@ -98,7 +99,7 @@ grill-me / grill-with-learn / strategyfinder
 | [`learn-one-concept`](skills/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念模型              |
 | [`to-sop`](skills/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |
 | [`to-task`](skills/to-task/SKILL.md)                     | 当前任务简报已具备问题、时间或约束、起点或证据缺口，需要规划当前一批行动；有 SOP 时优先读取 | `TASKS.md`；第一项任务可立即开始，并记录规划依据 |
-| [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | 课程、参考资料、学习记录与本轮练习证据              |
+| [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | `LEARNER-PROFILE.md`、课程、参考资料、学习记录与本轮练习证据              |
 | [`study-review`](skills/study-review/SKILL.md)           | 检验一个概念/能力，或在检查点审核学习效果 | 证据化结论、工件处理决定与 `reviews/` 复盘 |
 
 ### Model-invoked
@@ -129,6 +130,7 @@ grill-me / grill-with-learn / strategyfinder
 - `STRATEGY-MAP.md` 与 `strategy-decisions/`：长期战略与关键取舍。
 - `MISSION.md` 与 `LEARNING-SOP.md`：学习的现实原因、范围、目标能力、方法和检查点。
 - `TASKS.md`：当前批次的适应性任务及其规划依据。
+- `LEARNER-PROFILE.md`：当前学习使命下的教学决定视图，只保留会改变下一节课的活跃分支、前置断层与理解边缘，由 `teach-me` 持续校准。
 - `learning-models/`：按指定材料、章节或概念建立的内容模型，不是学习证据。
 - `RESOURCES.md`、`lessons/`、`reference/`、`GLOSSARY.md`、`NOTES.md` 与 `assets/`：由 `teach-core` 维护的教学来源、课程、参考知识、术语、笔记与复用组件。
 - `reviews/`：检查点的学习效果证据、设计诊断与校正动作。

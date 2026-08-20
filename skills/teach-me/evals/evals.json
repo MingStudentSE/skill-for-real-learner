@@ -1,0 +1,45 @@
+{
+  "skill_name": "teach-me",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我想系统学习线性回归。我数学基础很好，不用管我的基础，直接开始课程。",
+      "expected_output": "把自述作为待验证假设；围绕线性回归目标只提出一个能改变教学决定的数学分支问题，然后等待学习者回答；首次校准完成后再创建学习画像。",
+      "files": [],
+      "expectations": [
+        "笼统的‘数学基础很好’只定位探测起点，相关分支仍保持待验证。",
+        "首次回应只提出一个会改变教学决定的区分性问题并等待。",
+        "学习者回答前不创建已验证画像；回答后才按证据创建或继续探测。"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "继续教我用梯度下降理解线性回归。请读取现有学习画像和记录后安排下一节。",
+      "expected_output": "复用向量与函数基础的已验证证据；先用一个区分性任务确认导数方向含义，若断层成立则把它作为最小前置桥梁，并更新当前教学决定。",
+      "files": [
+        "evals/fixtures/linear-regression/MISSION.md",
+        "evals/fixtures/linear-regression/LEARNER-PROFILE.md",
+        "evals/fixtures/linear-regression/learning-records/0001-vector-and-function-basics.md"
+      ],
+      "expectations": [
+        "向量和函数定义作为可直接复用的已验证起点。",
+        "导数方向关系先被标为待探测，探测结果决定是补桥还是进入梯度。",
+        "下一步只有一个区分性任务，并写明重新校准信号。"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "你刚讲完梯度表示上升最快方向。我能背出这个结论，但给我一个具体损失函数时，我还是不知道参数该往哪边调。继续下一节吧。",
+      "expected_output": "将“能复述梯度方向”与“能根据梯度决定参数更新”分开判定；把参数更新关系转为补桥决定，用一个更小的具体函数任务定位断层，并更新现有学习画像。",
+      "files": [
+        "evals/fixtures/linear-regression/MISSION.md",
+        "evals/fixtures/linear-regression-after-lesson/LEARNER-PROFILE.md"
+      ],
+      "expectations": [
+        "现有画像中‘发展中’的梯度关系根据新表现转为前置断层或更精确的补桥分支。",
+        "唯一下一步对准导数符号、上升方向与下降更新之间的关系。",
+        "画像当即更新当前教学决定；持久修正在后续证据成立时才写入 learning-records。"
+      ]
+    }
+  ]
+}

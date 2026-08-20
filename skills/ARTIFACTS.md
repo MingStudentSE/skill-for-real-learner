@@ -24,6 +24,12 @@
 
 `teach-me` 调用这一完整基底并增加学习闭环，不复制或另定课程工件格式。`to-sop` 可以创建或更新同一份 `MISSION.md`，现实目标变化时必须先由学习者确认。
 
+## `LEARNER-PROFILE.md`
+
+`teach-me` 用学习画像保存当前学习使命下、按活跃知识分支组织的教学决定视图：已验证起点、发展中理解、前置断层、待探测项与当前理解边缘。它用于选择下一个位于理解边缘的最小学习块，并在新表现改变教学判断时就地更新。不再影响下一步的分支从画像移除，持久证据留在 `learning-records/`。
+
+画像不是固定级别、学习日志或掌握证明。`learning-records/` 仍是持久理解、修正和真实证据的来源，`NOTES.md` 仍保存稳定教学偏好。格式与更新规则见 [`teach-me/references/LEARNER-PROFILE-FORMAT.md`](teach-me/references/LEARNER-PROFILE-FORMAT.md)。
+
 ## `LEARNING-SOP.md`
 
 一份 SOP 覆盖学习使命中的一个稳定阶段。学习复盘可以修订它；当使命或阶段方向发生实质变化时，创建新的 SOP。格式由 [`to-sop`](to-sop/SKILL.md) 随 skill 一起发布，见 [SOP 格式](to-sop/references/sop-format.md)。
