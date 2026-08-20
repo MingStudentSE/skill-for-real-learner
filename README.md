@@ -66,7 +66,7 @@ grill-me / grill-with-learn / strategyfinder
 - `/strategyfinder`：长期战略入口。适合决定有限精力该投入、暂停或放弃什么；它维护唯一的 `STRATEGY-MAP.md`，不替代日常学习计划。
 - `/to-sop`：把已经澄清的学习方向整理为当前阶段可长期执行的 SOP，明确目标能力、学习方法、资源策略与复盘检查点。
 - `/to-task`：优先根据 SOP 规划当前一批可执行的学习任务；当前对话已形成包含问题、时间或约束、起点或证据缺口的任务简报时，也可直接规划。每项任务写清证据、练习、反馈、投入与完成条件。
-- `/teach-me`：围绕真实问题开展跨会话教学，持续记录学习画像，将下一个学习块放在当前理解边缘，再通过讲回、练习与微实验校准难度并产生行动证据。
+- `/teach-me`：围绕真实问题开展跨会话教学，持续记录学习画像，将下一个学习块放在当前理解边缘；每节课先明确可检查目标，达标或同一误区重试两轮仍不稳定时结束当前学习块。
 - `/study-review`：先确定要证明的解释、判断或行动，再盘点已有作品与反馈；证据不足时通过无提示展示和苏格拉底式追问现场取证。它既能独立检验一个概念，也能在学习检查点校正课程、SOP 与任务，并记录需要重审的使命或战略信号。
 
 ### Shortest path
@@ -99,7 +99,7 @@ grill-me / grill-with-learn / strategyfinder
 | [`learn-one-concept`](skills/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念模型              |
 | [`to-sop`](skills/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |
 | [`to-task`](skills/to-task/SKILL.md)                     | 当前任务简报已具备问题、时间或约束、起点或证据缺口，需要规划当前一批行动；有 SOP 时优先读取 | `TASKS.md`；第一项任务可立即开始，并记录规划依据 |
-| [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动较长、跨会话的课程学习   | `LEARNER-PROFILE.md`、课程、参考资料、学习记录与本轮练习证据              |
+| [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动目标有界、跨会话的课程学习 | `LEARNER-PROFILE.md`、含本课目标的课程、参考资料、学习记录与本轮练习证据              |
 | [`study-review`](skills/study-review/SKILL.md)           | 检验一个概念/能力，或在检查点审核学习效果 | 证据化结论、工件处理决定与 `reviews/` 复盘 |
 
 ### Model-invoked

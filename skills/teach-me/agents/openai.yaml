@@ -1,5 +1,5 @@
 interface:
   display_name: "互动教学"
-  short_description: "按学习画像校准课程难度"
+  short_description: "按学习画像选择课程范围与难度，以明确的本课目标控制每节课停止"
 policy:
   allow_implicit_invocation: false
