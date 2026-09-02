@@ -20,6 +20,7 @@ argument-hint: "我当前的学习目标、材料或卡点是："
 | 当前需要 | 建议学习者显式运行 | 主要工件或结果 |
 | --- | --- | --- |
 | 长期方向、精力配置或重大取舍仍不清楚 | `/strategyfinder` | `STRATEGY-MAP.md` 与 `strategy-decisions/` |
+| 已选定重要项目，需要建立十二周执行周期，或在周期中做周复盘、纠偏和结算 | `/twelve-week-planner` | 周期目标、战术周次、Model Week、周记分与第十三周结算 |
 | 学习使命或当前决策还说不清 | `/grill-with-learn` | 已澄清的学习共识；指定材料需要理解时可建立学习模型 |
 | 已有方向，需要稳定阶段的方法、资源策略和检查点 | `/to-sop` | `MISSION.md` 与 `LEARNING-SOP.md` |
 | 当前任务简报已具备问题或目标能力、时间或约束，以及已知起点或证据缺口 | `/to-task` | `TASKS.md`；有 SOP 时优先读取，否则记录当前任务简报 |

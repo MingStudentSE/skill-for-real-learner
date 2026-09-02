@@ -11,6 +11,7 @@
 | 你的处境 | 它通常会指向 |
 | --- | --- |
 | 长期方向或精力取舍不清楚 | [`strategyfinder`](strategyfinder.md) |
+| 已选定重要项目，要建立十二周周期或处理周期中的复盘、偏差和结算 | [`twelve-week-planner`](twelve-week-planner.md) |
 | 学习使命或当前决定说不清 | [`grill-with-learn`](grill-with-learn.md) |
 | 已有方向，需要稳定阶段的方法、资源策略或检查点 | [`to-sop`](to-sop.md) |
 | 当前任务简报已具备问题或目标能力、时间或约束，以及已知起点或证据缺口 | [`to-task`](to-task.md) |
@@ -41,4 +42,4 @@ README 展示全貌；这个入口根据你当前的阻塞点和已有工件缩�
 
 ## 它在流程中的位置
 
-这是覆盖整个工具集的独立导航器，不是链条上的一个阶段。它常把你送往 [`strategyfinder`](strategyfinder.md)、[`grill-with-learn`](grill-with-learn.md) 或一个已有工件的后续入口；完整入口清单见[文档索引](README.md)。
+这是覆盖整个工具集的独立导航器，不是链条上的一个阶段。它常把你送往 [`strategyfinder`](strategyfinder.md)、[`twelve-week-planner`](twelve-week-planner.md)、[`grill-with-learn`](grill-with-learn.md) 或一个已有工件的后续入口；完整入口清单见[文档索引](README.md)。

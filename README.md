@@ -64,6 +64,7 @@ grill-me / grill-with-learn / strategyfinder
 - `/grill-me`：无状态访谈。聊完即结束，不留下文件。
 - `/grill-with-learn`：学习质询入口。它通过 `grilling` 澄清学习使命或当前决策；只有指定材料本身阻塞判断时，才可复用 `learn-modeling` 建立学习模型。
 - `/strategyfinder`：长期战略入口。适合决定有限精力该投入、暂停或放弃什么；它维护唯一的 `STRATEGY-MAP.md`，不替代日常学习计划。
+- `/twelve-week-planner`：十二周执行入口。适合把已经选定的重要项目变成容量可证、每周可记分的短周期，并在执行中处理偏差、中断和第十三周结算。
 - `/to-sop`：把已经澄清的学习方向整理为当前阶段可长期执行的 SOP，明确目标能力、学习方法、资源策略与复盘检查点。
 - `/to-task`：优先根据 SOP 规划当前一批可执行的学习任务；当前对话已形成包含问题、时间或约束、起点或证据缺口的任务简报时，也可直接规划。每项任务写清证据、练习、反馈、投入与完成条件。
 - `/teach-me`：围绕真实问题开展跨会话教学，持续记录学习画像，将下一个学习块放在当前理解边缘；每节课先明确可检查目标，达标或同一误区重试两轮仍不稳定时结束当前学习块。课程引用工作区本地电子书时，会直接链接到实际使用的 PDF 页。
@@ -95,6 +96,7 @@ grill-me / grill-with-learn / strategyfinder
 | ----------------------------------------------------------------- | -------------------- | -------------------------------- |
 | [`ask-ming`](skills/ask-ming/SKILL.md)                   | 不确定下一步该用哪个学习 skill   | 一条建议手动执行的命令与工件说明                 |
 | [`strategyfinder`](skills/strategyfinder/SKILL.md)       | 审视长期方向、精力配置和重大取舍     | `STRATEGY-MAP.md` 与决策卡           |
+| [`twelve-week-planner`](skills/twelve-week-planner/SKILL.md) | 将重要项目规划并运行成十二周执行周期 | 周期目标、战术周次、Model Week、周记分与第十三周结算 |
 | [`grill-with-learn`](skills/grill-with-learn/SKILL.md)   | 澄清学习使命或当前学习决策        | 已达成的学习共识；指定材料需要建模时，可建立 `learning-models/` 中的模型 |
 | [`learn-one-concept`](skills/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念模型              |
 | [`to-sop`](skills/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |

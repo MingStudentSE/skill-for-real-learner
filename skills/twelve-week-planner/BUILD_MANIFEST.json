@@ -1,0 +1,43 @@
+{
+  "tool": "cangjie-tools v2.5.0",
+  "published_hashes": {
+    "SKILL.md": "bdd78713974d3d31c59ec0e679070a704102a90fa13b87353da23ca547f2574f",
+    "references/capabilities/commitment-cost-gate.md": "a0254b17e752acc5770df8bad681fcfc02648c0206d216a0d8a569b733f0d473",
+    "references/capabilities/cycle-phase-change-control.md": "681ca1c9f17fd7eb7a99e1a64b51fbcb6b006c866595a0bb47e40c3fdeb15ce8",
+    "references/capabilities/execution-system-diagnosis.md": "4a8521b28e6f3ab3b30dbbc81c1ff243abd25af788f6f79632d72e3478afe8ba",
+    "references/capabilities/goal-tactic-week-compiler.md": "c9787e78d7e7f7c620df9c795fdf264d0b39fdcf968f6ff701bb2a474808d70f",
+    "references/capabilities/independent-twelve-week-cycle.md": "86cec2993dd23d81b39ddcb32ccc5a17c673405fa9b5754455c3a2f9d055b35c",
+    "references/capabilities/map-present-and-select-goal.md": "9c97cd6ef930d31ac23c6f033586b07882ecc5fac6c2cfb773e9777fcd4b5635",
+    "references/capabilities/model-week-capacity-proof.md": "de9c83d5c65ce077f404f3dae5bb9f346061886f4f2439f92f51318b0ee80272",
+    "references/capabilities/multi-project-serial-focus.md": "8c5798623740c2c4fc512d340c3d14def7cbc666210658d2dc130c2b66746a2d",
+    "references/capabilities/scorecard-four-quadrant-diagnosis.md": "35096d430952e12fb9468501ebcaae45669241734f04afbedb3fa13042f795b7",
+    "references/capabilities/team-ownership-weekly-meeting.md": "6dc50b9ce2526bf834545107207beb2fb42c94da685f975e5ef168a7f5f96072",
+    "references/capabilities/thirteenth-week-review.md": "20bc01629da45493f028e44bdfd605f6fc56c156e03bde30ceefe56e16d6abc7",
+    "references/capabilities/vision-to-current-project.md": "0215264e035cadfe29bd9688bf14844962290d259b5628c10ca44ec5ab7c117d",
+    "references/capabilities/weekly-execution-loop.md": "290d18ddf10fef0820175a2343f0c5672863a0dfc0002cad982b1577e047b064",
+    "references/capability-index.md": "a83837e372d303eea76d8476240de4340ba18123170fac6287ab15b8bca9d630",
+    "references/cheatsheet.md": "2c8e3863d110e0e196781e48eb2bae659e36b0f74300c9c75c5c9540681e771c",
+    "references/glossary.md": "1a75cc1db0db5d7c3e9e83fab0b7fad8cc0695fa017a58be32d9e7ecd11452c4",
+    "references/overview.md": "b1160107acc916db5e991638e7c6386b212593a6ffa171102912dcbf68bd9353"
+  },
+  "note": "update/重编译前比对 published_hashes；检测到本地手改不得静默覆盖",
+  "bundle_id": "bundle.twelve-week-planner",
+  "bundle_sha256": "3f301a77f4124a7447b4e6bac8bb18448e596cbffb7633746d1109edea28a964",
+  "variant": "single",
+  "run_id": "run-20260902-080905-426d91",
+  "decision": {
+    "schema_version": 1,
+    "requested": "auto",
+    "selected": "single",
+    "decision_policy": "single-first-v1",
+    "skill_budget": 8,
+    "promoted_count": 7,
+    "capability_count": 13,
+    "reasons": [
+      "7 个能力通过晋级门，但触发验证阈值为 TBD-after-baseline 尚未启用；按 single-first 原则先推荐 single，拆分由使用证据驱动"
+    ],
+    "alternative": "compact pack（1 个来源路由入口 + 7 个晋级 Skill，共 8 个可发现入口）",
+    "user_confirmed": false,
+    "preserve_strategy_on_update": true
+  }
+}

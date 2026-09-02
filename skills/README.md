@@ -2,10 +2,11 @@
 
 ## User-invoked
 
-以下入口只能由学习者手动选择。`strategyfinder`、`to-sop`、`to-task`、`teach-me` 与 `study-review` 各自独立；有共享工件时可以交接，没有工件时也不会彼此自动启动。
+以下入口只能由学习者手动选择。`strategyfinder`、`twelve-week-planner`、`to-sop`、`to-task`、`teach-me` 与 `study-review` 各自独立；有共享工件时可以交接，没有工件时也不会彼此自动启动。
 
 - [ask-ming](ask-ming/SKILL.md)：不确定该从哪个学习 skill 开始时，推荐一条由学习者手动执行的命令及其工件。
 - [strategyfinder](strategyfinder/SKILL.md)：维护学习者唯一的长期战略地图，并逐张推进影响精力配置的战略决策。
+- [twelve-week-planner](twelve-week-planner/SKILL.md)：把已选定的重要项目变成容量可证、每周可记分的十二周执行周期，并在周期中诊断偏差、处理变更和完成第十三周结算。
 - [grill-with-learn](grill-with-learn/SKILL.md)：通过上游 `grilling` 澄清学习使命或当前决策；指定材料阻塞判断时可复用 `learn-modeling` 建模。
 - [learn-one-concept](learn-one-concept/SKILL.md)：以轻量互动带用户学懂一个概念，通过讲回、判断或微行动形成证据；用户选择保存时，可在本轮中复用 `learn-modeling` 建立概念模型。
 - [teach-me](teach-me/SKILL.md)：在 `teach-core` 的完整教学工作区之上增加“问题—概念—行动—反思”闭环，以学习画像安排课程范围和难度，以每节课的可检查目标控制停止；课程使用本地电子书时直链具体 PDF 页。

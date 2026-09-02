@@ -1,0 +1,6 @@
+interface:
+  display_name: "十二周规划"
+  short_description: "将重要项目变成容量可证、每周可记分的十二周执行周期"
+  default_prompt: "使用 $twelve-week-planner 帮我制定或运行当前十二周计划。"
+policy:
+  allow_implicit_invocation: false
