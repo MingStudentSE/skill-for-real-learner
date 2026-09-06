@@ -1,0 +1,3 @@
+interface:
+  display_name: "User Profile Builder"
+  short_description: "建立并持续更新用户偏好与 Agent 角色，按新证据替换、合并和清退"

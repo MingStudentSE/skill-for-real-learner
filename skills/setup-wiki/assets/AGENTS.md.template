@@ -1,0 +1,13 @@
+---
+type: Instruction
+---
+
+# AGENTS.md
+
+## 启动
+
+读取 [USER.md]({{user_path}}) 与 [SOUL.md]({{soul_path}})。按任务从 [根索引](index.md) 定位内容，从 [规则索引]({{rules_index_path}}) 读取适用规则。
+
+## 写入
+
+新增、修改、移动或删除笔记前，读取 [知识库维护规则]({{maintenance_rule_path}})，按其要求维护属性、索引、链接和根日志。

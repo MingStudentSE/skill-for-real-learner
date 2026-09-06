@@ -17,8 +17,12 @@
 | 当前任务简报已具备问题或目标能力、时间或约束，以及已知起点或证据缺口 | [`to-task`](to-task.md) |
 | 想把材料、章节或概念整理成模型笔记 | [`learn-modeling`](learn-modeling.md) |
 | 想互动学一个概念、开展目标有界的持续教学或复盘 | 对应的专门入口 |
+| 新建或已有知识库需要系统规则、AI 入口，或检查／修复 OKF 维护机制 | [`setup-wiki`](setup-wiki.md) |
+| 需要建立或更新用户协作偏好、Agent 角色，或整理画像膨胀与冲突 | [`user-profile-builder`](user-profile-builder.md) |
 
 已有明确选择时，直接调用那个 skill 更快。
+
+知识库维护机制由 `setup-wiki` 负责；协作画像 `USER.md` 与 `SOUL.md` 由 `user-profile-builder` 管理；用于安排课程的 `LEARNER-PROFILE.md` 仍由 `teach-me` 维护。导航器会说明对应工件，只推荐入口，不执行修改。
 
 ## 它给出的不是路线图，而是一条下一步
 

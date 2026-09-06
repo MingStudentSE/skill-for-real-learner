@@ -1,0 +1,5 @@
+interface:
+  display_name: "Setup Wiki"
+  short_description: "搭建知识库系统规则与入口，按 OKF 维护属性、索引和日志"
+policy:
+  allow_implicit_invocation: false

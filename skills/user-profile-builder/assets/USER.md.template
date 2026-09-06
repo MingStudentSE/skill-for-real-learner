@@ -1,0 +1,24 @@
+# USER.md
+
+## Address and Language
+
+- Preferred address: {{CONFIRMED_VALUE}}
+- Primary language: {{CONFIRMED_VALUE}}
+- Timezone: {{ONLY_IF_RELEVANT_AND_CONFIRMED}}
+
+## Stable Context
+
+- {{ONLY_CONTEXT_THAT_CHANGES_ASSISTANCE}}
+
+## Collaboration Preferences
+
+- {{BEHAVIORALLY_SPECIFIC_PREFERENCE}}
+- {{BEHAVIORALLY_SPECIFIC_PREFERENCE}}
+
+## Confirmation Boundaries
+
+- {{WHEN_TO_ACT_WHEN_TO_PREVIEW_WHEN_TO_ASK}}
+
+## Active Context
+
+- {{YYYY-MM-DD}} · active — {{SEMI_STABLE_CONTEXT}}

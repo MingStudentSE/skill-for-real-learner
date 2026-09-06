@@ -1,5 +1,7 @@
 # Skills for Real Learners
 
+当前仓库版本：**0.9**。版本号以根目录 [VERSION](VERSION) 为准，更新时同步此处。
+
 一组把「我想学什么」变成可观察能力证据的 Agent Skills。它们不替学习者决定人生，也不把课程完成或投入时长误当成掌握；每个 skill 都只负责学习过程中的一个清晰环节，因此可以按你的现实问题自由组合。
 
 本仓库借鉴 [Matt Pocock 的 Skills for Real Engineers](https://github.com/mattpocock/skills)：依赖其中的 `grill-me`、`grilling`、`research` 与 `prototype`，并把原版 `teach` 镜像为可被 `teach-me` 调用的 `teach-core`。它们分别用短访谈或持续追问对齐真正的问题、用教学和练习形成反馈、用研究核实外部事实，并以低成本原型验证关键假设。学习流程本身保留在你自己的工作区，随时可以阅读、调整和扩展。
@@ -103,6 +105,7 @@ grill-me / grill-with-learn / strategyfinder
 | [`to-task`](skills/to-task/SKILL.md)                     | 当前任务简报已具备问题、时间或约束、起点或证据缺口，需要规划当前一批行动；有 SOP 时优先读取 | `TASKS.md`；第一项任务可立即开始，并记录规划依据 |
 | [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动目标有界、跨会话的课程学习 | `LEARNER-PROFILE.md`、含本课目标的课程、参考资料、学习记录与本轮练习证据              |
 | [`study-review`](skills/study-review/SKILL.md)           | 检验一个概念/能力，或在检查点审核学习效果 | 证据化结论、工件处理决定与 `reviews/` 复盘 |
+| [`setup-wiki`](skills/setup-wiki/SKILL.md)               | 为新建或已有知识库搭建维护机制，沿用用户结构 | 系统规则、画像入口、`AGENTS.md`、OKF 属性、各级索引与根日志 |
 
 ### Model-invoked
 
@@ -112,6 +115,7 @@ grill-me / grill-with-learn / strategyfinder
 | --- | --- | --- |
 | [`teach-core`](skills/teach-core/SKILL.md) | 为 `teach-me` 提供原版、完整的有状态教学工作区 | `MISSION.md`、课程、资源、参考资料、术语表与学习记录 |
 | [`learn-modeling`](skills/learn-modeling/SKILL.md) | 将指定材料、章节或概念建成学习者可读的模型笔记 | `learning-models/` 中的材料模型或概念模型 |
+| [`user-profile-builder`](skills/user-profile-builder/SKILL.md) | 建立画像，或根据新证据持续更新用户偏好与 Agent 角色 | 在预算内更新 `USER.md`、`SOUL.md` 的实际差异；仅审查时返回问题与建议 |
 
 ## The evidence loop
 

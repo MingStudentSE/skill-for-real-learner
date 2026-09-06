@@ -28,8 +28,14 @@ argument-hint: "我当前的学习目标、材料或卡点是："
 | 想先检验一个概念/能力，或到达检查点需要根据表现证据决定校正什么 | `/study-review` | 证据化结论、相关工件处理决定与 `reviews/` 复盘 |
 | 指定材料、章节或概念只需要整理成可回溯的模型笔记 | `/learn-modeling` | `learning-models/<date>-<topic>.md` |
 | 想从讲解开始，通过讲回、判断或行动学懂一个点名概念 | `/learn-one-concept` | 本轮解释、判断或行动证据；可选概念模型 |
+| 新建或已有知识库需要系统规则、AI 入口，或需要检查／修复 OKF 维护机制 | `/setup-wiki` | 系统规则、`AGENTS.md`、按需属性、逐级索引与根日志；仅检查时返回问题清单 |
+| 需要建立画像、按新信息更新用户偏好或 Agent 角色，或整理画像膨胀与冲突 | `/user-profile-builder` | 在预算内更新 `USER.md` 与 `SOUL.md`；仅审查时返回问题与建议 |
 
-`/learn-modeling` 也可被其他学习流程复用；其余表中的学习流程仍由学习者手动选择和启动。
+`/learn-modeling` 与 `/user-profile-builder` 也可被其他流程按需复用；导航器只推荐，不执行。其余表中的学习流程仍由学习者手动选择和启动。
+
+`setup-wiki` 沿用用户知识库的真实结构，负责维护机制；不代替内容建模、学习任务规划或学习效果判断。
+
+`user-profile-builder` 管理协作偏好和角色；用于安排教学的 `LEARNER-PROFILE.md` 仍由 `teach-me` 维护。
 
 ## 回答格式
 

@@ -13,6 +13,7 @@
 - [to-sop](to-sop/SKILL.md)：将已澄清的学习讨论整理为可持续执行的学习 SOP，输出 `MISSION.md` 与 `LEARNING-SOP.md`。
 - [to-task](to-task/SKILL.md)：依据学习 SOP 或已具备问题、时间或约束、起点或证据缺口的当前任务简报，规划下一批适应性学习任务，输出 `TASKS.md`。
 - [study-review](study-review/SKILL.md)：根据已有作品或现场无提示展示检验掌握，输出证据化结论，并据此校正课程、SOP、任务或记录使命/战略信号。
+- [setup-wiki](setup-wiki/SKILL.md)：为新建或已有知识库搭建系统规则和 `AGENTS.md`，依据 OKF 维护笔记属性、逐级索引与根日志；用户命名与结构优先，原正文和 Obsidian 使用效果保留。
 
 ## Model-invoked
 
@@ -20,5 +21,6 @@
 
 - [teach-core](teach-core/SKILL.md)：完整镜像上游 `teach`，解除隐式调用限制后作为 `teach-me` 的基础教学能力。
 - [learn-modeling](learn-modeling/SKILL.md)：把指定材料、章节、笔记片段或单个概念建成学习者能读懂的模型笔记，输出 `learning-models/` 中的材料模型或概念模型。
+- [user-profile-builder](user-profile-builder/SKILL.md)：创建并持续更新 `USER.md` 与 `SOUL.md`，响应明确更正、角色调整或维护流程中的稳定新证据，完成原位修改与验证；用去重、清退和字符硬预算控制体积，仅审查时不写文件。
 
 各 skill 自带其创建文件所需的格式说明；[ARTIFACTS.md](ARTIFACTS.md) 只说明这套学习流程共享哪些工件及其边界。

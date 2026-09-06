@@ -17,11 +17,13 @@
 | `to-sop` | 将已澄清的方向变成稳定阶段的学习方法 | [阅读](to-sop.md) |
 | `to-task` | 将 SOP 或具备问题、时间／约束、起点／证据缺口的当前任务简报变成当前一批可执行任务 | [阅读](to-task.md) |
 | `study-review` | 根据已有或现场表现检验概念、能力与学习效果 | [阅读](study-review.md) |
+| `setup-wiki` | 为新建或已有知识库搭建系统规则、AGENTS.md 与 OKF 维护机制 | [阅读](setup-wiki.md) |
 
 ## Model-invoked
 
 | Skill | 适合解决的问题 | 文档 |
 | --- | --- | --- |
 | `learn-modeling` | 将指定材料、章节或概念变成可学习、可回溯的模型笔记 | [阅读](learn-modeling.md) |
+| `user-profile-builder` | 建立画像并按新信息持续更新用户偏好与 Agent 角色，控制膨胀 | [阅读](user-profile-builder.md) |
 
-上游依赖及其安装顺序见[根 README 的 Installation](../README.md#installation)；原版 `teach` 已镜像为 `teach-core`。本目录记录本仓库面向学习者的 10 个 skill。
+上游依赖及其安装顺序见[根 README 的 Installation](../README.md#installation)；原版 `teach` 已镜像为 `teach-core`。本目录记录本仓库面向学习者的 12 个 skill。
