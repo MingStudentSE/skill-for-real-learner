@@ -1,0 +1,5 @@
+interface:
+  display_name: "互动教学"
+  short_description: "用 /teach-me 01 开始项目任务教学，记录证据并按验收更新状态"
+policy:
+  allow_implicit_invocation: false

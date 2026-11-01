@@ -1,29 +1,32 @@
 # Skills for Real Learners 文档
 
-这些页面面向选择和使用学习 skill 的人。它们解释每个入口解决什么问题、何时使用、成功时会留下什么可观察信号，以及它与其他入口的边界；具体运行步骤见 [skills 索引及各自的 `SKILL.md`](../skills/README.md)。
+本目录帮助选择入口，说明适用场景、有效信号和能力边界；具体运行步骤见 [skills 清单](../skills/README.md)。第一次了解项目可先读[项目全貌与阅读导航](project-overview.md)。
 
-本仓库的 skill 分为两类：**user-invoked** 入口只能由学习者手动输入命令；**model-invoked** 能力可在当前学习流程确有需要时被复用。`teach-core` 作为上游镜像保留，不设面向人的说明页。页面不替你启动下一步。
+## Learn
 
-## User-invoked
-
-| Skill | 适合解决的问题 | 文档 |
+| Skill | 调用方式 | 适合解决的问题 |
 | --- | --- | --- |
-| `ask-ming` | 不确定当前该从哪个学习入口开始 | [阅读](ask-ming.md) |
-| `strategyfinder` | 长期方向、精力配置或重大取舍 | [阅读](strategyfinder.md) |
-| `twelve-week-planner` | 把重要项目规划并运行成十二周执行周期 | [阅读](twelve-week-planner.md) |
-| `grill-with-learn` | 学习使命或当前决策仍说不清 | [阅读](grill-with-learn.md) |
-| `learn-one-concept` | 想快速学懂一个已点名的概念 | [阅读](learn-one-concept.md) |
-| `teach-me` | 围绕真实问题持续教学，按学习画像选课并以本课目标停止 | [阅读](teach-me.md) |
-| `to-sop` | 将已澄清的方向变成稳定阶段的学习方法 | [阅读](to-sop.md) |
-| `to-task` | 将 SOP 或具备问题、时间／约束、起点／证据缺口的当前任务简报变成当前一批可执行任务 | [阅读](to-task.md) |
-| `study-review` | 根据已有或现场表现检验概念、能力与学习效果 | [阅读](study-review.md) |
-| `setup-wiki` | 为新建或已有知识库搭建系统规则、AGENTS.md 与 OKF 维护机制 | [阅读](setup-wiki.md) |
+| [setup-learn-skills](setup-learn-skills.md) | User-invoked | 建立一个根 Agent 入口、多项目布局与读取规则 |
+| [grill-with-learn](grill-with-learn.md) | User-invoked | 学习问题需要澄清，材料理解可能阻塞判断 |
+| [strategyfinder](strategyfinder.md) | User-invoked | 从实践投入与反馈分析长期方向，测试关键假设后决定投入取舍 |
+| [to-plan](to-plan.md) | User-invoked | 澄清学习目标，共同讨论适合个人情况的方案，同意后生成学习计划 |
+| [to-task](to-task.md) | User-invoked | 沿用对话计划或已有文件，拆成简洁编号任务，复杂任务按需展开 |
+| [teach-me](teach-me.md) | User-invoked | 从编号任务或真实问题开始教学，理解机制、判断适用性并检验表现 |
+| [learn-modeling](learn-modeling.md) | Model-invoked | 把指定材料或概念建成可回溯模型 |
 
-## Model-invoked
+## Up-stream
 
-| Skill | 适合解决的问题 | 文档 |
+| Skill | 调用方式 | 适合解决的问题 |
 | --- | --- | --- |
-| `learn-modeling` | 将指定材料、章节或概念变成可学习、可回溯的模型笔记 | [阅读](learn-modeling.md) |
-| `user-profile-builder` | 建立画像并按新信息持续更新用户偏好与 Agent 角色，控制膨胀 | [阅读](user-profile-builder.md) |
+| [grill-me](grill-me.md) | User-invoked | 显式启动一轮质询 |
+| [grilling](grilling.md) | Model-invoked | 为质询入口提供官方访谈方法 |
 
-上游依赖及其安装顺序见[根 README 的 Installation](../README.md#installation)；原版 `teach` 已镜像为 `teach-core`。本目录记录本仓库面向学习者的 12 个 skill。
+User-invoked 入口由学习者显式选择，不相互自动启动；Model-invoked 能力可以按需复用，也可直接点名。共 9 个公开 skill；官方 `teach` 是 `teach-me` 的内部教学基础，没有单独的人类页面或安装入口。
+
+## DeepSeek Harness 插件
+
+[学习工作台](strategy-plugin.md)：统一承载各 skill 的可视化功能，逐个实现与验收。目前已实现学习战略（`strategyfinder`）。
+
+## Deprecated
+
+[历史文档索引](deprecated/README.md)只说明退出 MVP 的旧能力，不作为当前入口推荐。`to-sop` 已改为 `to-plan`。安装与官方来源说明见[根 README](../README.md#installation)和[统一上游记录](../UPSTREAM.md)。

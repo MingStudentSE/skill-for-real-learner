@@ -1,157 +1,98 @@
 # Skills for Real Learners
 
-当前仓库版本：**0.9**。版本号以根目录 [VERSION](VERSION) 为准，更新时同步此处。
+当前仓库版本：**1.0**，以 [VERSION](VERSION) 为准。
 
-一组把「我想学什么」变成可观察能力证据的 Agent Skills。它们不替学习者决定人生，也不把课程完成或投入时长误当成掌握；每个 skill 都只负责学习过程中的一个清晰环节，因此可以按你的现实问题自由组合。
-
-本仓库借鉴 [Matt Pocock 的 Skills for Real Engineers](https://github.com/mattpocock/skills)：依赖其中的 `grill-me`、`grilling`、`research` 与 `prototype`，并把原版 `teach` 镜像为可被 `teach-me` 调用的 `teach-core`。它们分别用短访谈或持续追问对齐真正的问题、用教学和练习形成反馈、用研究核实外部事实，并以低成本原型验证关键假设。学习流程本身保留在你自己的工作区，随时可以阅读、调整和扩展。
-
-## Design sources
-
-本仓库的学习方法还受以下材料启发；它们决定的是**如何学习和验证**，不是替代某个领域的一手资料或专业判断。
-
-| 材料                      | 对 Skill 设计的贡献                                                                                       |
-| ---------------------- | --------------------------------------------------------------------------------------------------- |
-| 《好好学习：个人知识管理精进指南（升级版）》 | 将「行动改变」而非阅读完成作为学习标准；启发了 `teach-me` 的讲回、微实验和反馈，以及 `study-review` 用结果检验学习内容是否真正用起来，再校正学习设计。           |
-| 《好好思考（全新升级版）》          | 将基本问题、最小必要知识、概念边界与对知识的诚实带入流程；它们成为 `to-sop` 的范围设计、`learn-modeling` 对原材料与补充解释的区分，以及 `teach-me` 的概念校准。 |
-| [Eero Alvar: How I Use AI to Learn Things](https://www.youtube.com/watch?v=kzcI5F4tGiU) | 将教学路径放在学习者当前理解的边缘：跳过已掌握内容，先补不可理解的前置断层，再用持续反馈校准学习画像、课程范围与难度。 |
-
-这些方法被编译为 [教学闭环](skills/teach-me/references/learning-loop.md)、[学习画像格式](skills/teach-me/references/LEARNER-PROFILE-FORMAT.md) 与 [学习效果审查依据](skills/study-review/references/learning-effect-review.md) 中的可执行判断。这些执行规则不替代设计来源，也不以一般学习方法代替查证最新事实或专业规范。
+一组在本地建立并持续执行学习计划的 Agent Skills。面向不同领域的自主学习者，用真实问题确定学习方向，通过计划、任务、教学和表现反馈持续推进。
 
 ## Installation
-
-先安装上游的基础能力。你可以直接安装完整套件；若在安装器中只选择部分 skill，至少选择 `grill-me`、`grilling`、`research` 与 `prototype`：
-
-```bash
-npx skills@latest add mattpocock/skills
-```
-
-再安装本仓库的学习 skills：
 
 ```bash
 npx skills@latest add MingStudentSE/skill-for-real-learner
 ```
 
-也可以把下面这段提示词直接发给你的 agent：
+在安装器中选择下方 9 个当前 skill，无需另外安装其他 skill 套件。查证外部事实、制作课程和执行测试等工作需要 Agent 自身具备相应工具。
 
-```text
-请为当前环境安装 Skills for Real Learners。先执行 `npx skills@latest add mattpocock/skills`，在交互式选择器中选择 `grill-me`、`grilling`、`research` 与 `prototype`。完成后执行 `npx skills@latest add MingStudentSE/skill-for-real-learner`。请按此顺序完成安装。
-```
+安装后在学习工作区运行 `/setup-learn-skills`，建立一个根 Agent 指令入口与多项目布局，保存本地路径和使用规则。已有配置与学习资料会被沿用；学习计划和教学记录由各自入口按需创建。
 
-每个入口的面向人说明见[学习 skill 文档](docs/README.md)：它们说明何时使用、可观察的有效信号和与其他入口的边界，而不复述运行步骤。
+## 从哪里开始
 
-## Start here
+### 长期学习
 
-### `/ask-ming`：显式导航入口
+适合想持续提升一项能力、系统学习一个领域，或需要重新判断学习方向的人。
 
-不知道从哪个学习 skill 开始时，先手动运行 `/ask-ming`。它只会推荐下一条由你输入的 `/skill` 命令，并说明应读取或交付哪个工件；不会自动启动流程、写入文件或替你作出学习取舍。
+1. **配置学习环境 — [setup-learn-skills](docs/setup-learn-skills.md)**：建立公共学习配置与根 Agent 规则入口，让多个学习项目分别保存计划、任务和教学记录。首次配置后，新增项目沿用公共约定。
+2. **判断长期方向 — [strategyfinder](docs/strategyfinder.md)**：当你不确定哪些方向值得持续投入时，从已有实践、时间、金钱、精力投入与反馈出发，识别关键假设，设计低成本真实测试，并维护长期战略地图与决策卡。方向明确时可直接制定计划。
+3. **共同制定计划 — [to-plan](docs/to-plan.md)**：可以从模糊的学习意图开始，聊清目标、基础与可投入的资源，共同调整学习路线、方法、节奏和检验点；你同意具体方案后，再生成或更新学习计划。
+4. **拆成可执行任务 — [to-task](docs/to-task.md)**：沿用当前对话中已明确的计划，或参考已有计划文件，从检验点倒推编号任务，写清行动、产出和验收条件。
+5. **持续教学与检验 — [teach-me](docs/teach-me.md)**：在当前项目输入 `/teach-me 01`，开始或继续第 01 项任务。通过讲解、练习、独立表现与实际反馈检验理解，保存学习证据，并记录下一步。需要调整计划或重排任务时，由你再次调用对应入口。
 
-### 推荐调用顺序
+已有计划可以直接拆任务，已有任务可以直接开始教学。长期方向判断与前置质询都按需使用。
 
-当你要开始一个新阶段、重新分配学习精力，或希望这次学习能留下可复用的计划时，从下面三个入口中选一个。稳定阶段的推荐路径经过 `/to-sop`；当当前任务简报已具备问题、时间或约束，以及已知起点或证据缺口时，短期行动可以直接进入 `/to-task`。这不表示 skill 会自动跳转；每一步仍由你手动运行。
+### 立刻学习
 
-```text
-grill-me / grill-with-learn / strategyfinder
-                  ↓
-                to-sop ────────────┐
-                                   ↓
-明确的当前任务简报
-（问题、时间／约束、起点／证据缺口） ──→ to-task
-                                   ↓
-                                teach-me
-                                   ↓
-                              study-review
-```
+适合现在就想弄懂一个概念、一段材料，或解决一个具体问题的人。可以直接带着问题开始，也可以先澄清自己究竟卡在哪里。
 
-- `/grill-me`：无状态访谈。聊完即结束，不留下文件。
-- `/grill-with-learn`：学习质询入口。它通过 `grilling` 澄清学习使命或当前决策；只有指定材料本身阻塞判断时，才可复用 `learn-modeling` 建立学习模型。
-- `/strategyfinder`：长期战略入口。适合决定有限精力该投入、暂停或放弃什么；它维护唯一的 `STRATEGY-MAP.md`，不替代日常学习计划。
-- `/twelve-week-planner`：十二周执行入口。适合把已经选定的重要项目变成容量可证、每周可记分的短周期，并在执行中处理偏差、中断和第十三周结算。
-- `/to-sop`：把已经澄清的学习方向整理为当前阶段可长期执行的 SOP，明确目标能力、学习方法、资源策略与复盘检查点。
-- `/to-task`：优先根据 SOP 规划当前一批可执行的学习任务；当前对话已形成包含问题、时间或约束、起点或证据缺口的任务简报时，也可直接规划。每项任务写清证据、练习、反馈、投入与完成条件。
-- `/teach-me`：围绕真实问题开展跨会话教学，持续记录学习画像，将下一个学习块放在当前理解边缘；每节课先明确可检查目标，达标或同一误区重试两轮仍不稳定时结束当前学习块。课程引用工作区本地电子书时，会直接链接到实际使用的 PDF 页。
-- `/study-review`：先确定要证明的解释、判断或行动，再盘点已有作品与反馈；证据不足时通过无提示展示和苏格拉底式追问现场取证。它既能独立检验一个概念，也能在学习检查点校正课程、SOP 与任务，并记录需要重审的使命或战略信号。
-
-### Shortest path
-
-当你只想马上把一个真实问题学会，不需要先建立长期计划时：
-
-```text
-/grill-me → /learn-one-concept
-```
-
-先运行 `/grill-me`，把现实问题或好奇点收敛为一个要解决的概念；再运行 `/learn-one-concept <概念>`，通过讲回、判断或微行动完成一个轻量学习回合。它适合从讲解开始学懂一个点；若想先检验当前掌握而不接受教学，使用 `/study-review`。
-
-### Building model notes
-
-书、文章、视频、章节或单个概念需要先被整理清楚时，可手动调用 `/learn-modeling`。它根据范围建立材料模型或概念模型，统一写入 `learning-models/<date>-<topic>.md`。它也是可复用的 model-invoked 能力：`teach-me` 或 `learn-one-concept` 在需要模型笔记时可以复用它。
-
-`/learn-modeling` 只建模知识内容，不代替互动教学、练习、任务规划或掌握评估。
-
-## Invocation and ownership
-
-### User-invoked
-
-这些流程只能由学习者手动选择。它们通过工件交接，不会彼此自动启动。
-
-| Skill                                                             | 何时使用                 | 产出                               |
-| ----------------------------------------------------------------- | -------------------- | -------------------------------- |
-| [`ask-ming`](skills/ask-ming/SKILL.md)                   | 不确定下一步该用哪个学习 skill   | 一条建议手动执行的命令与工件说明                 |
-| [`strategyfinder`](skills/strategyfinder/SKILL.md)       | 审视长期方向、精力配置和重大取舍     | `STRATEGY-MAP.md` 与决策卡           |
-| [`twelve-week-planner`](skills/twelve-week-planner/SKILL.md) | 将重要项目规划并运行成十二周执行周期 | 周期目标、战术周次、Model Week、周记分与第十三周结算 |
-| [`grill-with-learn`](skills/grill-with-learn/SKILL.md)   | 澄清学习使命或当前学习决策        | 已达成的学习共识；指定材料需要建模时，可建立 `learning-models/` 中的模型 |
-| [`learn-one-concept`](skills/learn-one-concept/SKILL.md) | 轻量、互动地学懂一个点名概念       | 本轮解释、判断或行动证据；可选概念模型              |
-| [`to-sop`](skills/to-sop/SKILL.md)                       | 已有清晰方向，需要稳定的阶段方法     | `MISSION.md` 与 `LEARNING-SOP.md` |
-| [`to-task`](skills/to-task/SKILL.md)                     | 当前任务简报已具备问题、时间或约束、起点或证据缺口，需要规划当前一批行动；有 SOP 时优先读取 | `TASKS.md`；第一项任务可立即开始，并记录规划依据 |
-| [`teach-me`](skills/teach-me/SKILL.md)                   | 用真实问题启动目标有界、跨会话的课程学习 | `LEARNER-PROFILE.md`、含本课目标的课程、参考资料、学习记录与本轮练习证据              |
-| [`study-review`](skills/study-review/SKILL.md)           | 检验一个概念/能力，或在检查点审核学习效果 | 证据化结论、工件处理决定与 `reviews/` 复盘 |
-| [`setup-wiki`](skills/setup-wiki/SKILL.md)               | 为新建或已有知识库搭建维护机制，沿用用户结构 | 系统规则、画像入口、`AGENTS.md`、OKF 属性、各级索引与根日志 |
-
-### Model-invoked
-
-以下能力可由模型在当前学习流程需要时复用。
-
-| Skill | 何时使用 | 产出 |
+| 你现在需要什么 | 使用哪个 skill | 它会怎样帮助你 |
 | --- | --- | --- |
-| [`teach-core`](skills/teach-core/SKILL.md) | 为 `teach-me` 提供原版、完整的有状态教学工作区 | `MISSION.md`、课程、资源、参考资料、术语表与学习记录 |
-| [`learn-modeling`](skills/learn-modeling/SKILL.md) | 将指定材料、章节或概念建成学习者可读的模型笔记 | `learning-models/` 中的材料模型或概念模型 |
-| [`user-profile-builder`](skills/user-profile-builder/SKILL.md) | 建立画像，或根据新证据持续更新用户偏好与 Agent 角色 | 在预算内更新 `USER.md`、`SOUL.md` 的实际差异；仅审查时返回问题与建议 |
+| 马上开始学一个概念或解决一个问题 | [teach-me](docs/teach-me.md) | 直接输入 `/teach-me 我想理解……`，从当前理解出发，讲解、练习并检验表现；无需预先制定计划或创建任务，也无需先完成环境配置 |
+| 梳理指定的书、文章、视频、章节或概念 | [learn-modeling](docs/learn-modeling.md) | 整理核心概念、关系、适用边界和难点，保留回到来源的位置，形成可供理解与教学使用的学习模型；模型本身不证明已经掌握 |
+| 通过追问澄清一个想法、计划或决策 | [grill-me](docs/grill-me.md) | 显式启动一轮质询，逐步检查假设、分歧与尚未想清楚的决定 |
+| 澄清学习问题，同时处理理解上的阻碍 | [grill-with-learn](docs/grill-with-learn.md) | 在质询中发现指定材料阻塞当前判断时，按需调用建模能力，理解后继续澄清问题 |
 
-## The evidence loop
+### 可复用的质询方法
 
-学习不是直线，也不是「完成一门课」后自动结束。每次复盘先检验学习内容产生的实际效果，再用证据记录需要校正的假设和下一步：
+[grilling](docs/grilling.md) 提供分轮访谈与追问方法，供质询入口和战略判断按需复用，也可以直接点名使用。
 
-```text
-学习模型 / 课程 / 任务 → 独立解释 / 真实产物 / 新情境迁移 → 学习效果审查
-                                                                  ↓
-                                                       校正假设与下一步
-```
+以上两条路径可以衔接：一次具体学习可以发展为长期计划，长期学习中也可以随时针对材料建模或澄清问题。每个 User-invoked 入口都由你显式启动，不会自动串联；`learn-modeling` 与 `grilling` 是 Model-invoked 能力，可被当前流程按需复用，也可直接点名。
 
-长期战略只在出现影响总体取舍的新证据时，才在下一次 `/strategyfinder` 中重新打开；一次表现波动不会自动改写战略。
+## Learn
 
-## Shared workspace
+本项目维护的学习能力位于 `skills/learn/`。
 
-流程会在当前学习工作区逐步维护以下状态，而不是另起一套隐藏课程：
+| Skill | 调用方式 | 何时使用与交付 |
+| --- | --- | --- |
+| [setup-learn-skills](skills/learn/setup-learn-skills/SKILL.md) | User-invoked | 建立工作区配置与根 Agent 规则指针 |
+| [grill-with-learn](skills/learn/grill-with-learn/SKILL.md) | User-invoked | 澄清学习目标或决策，指定材料阻塞判断时按需建模 |
+| [strategyfinder](skills/learn/strategyfinder/SKILL.md) | User-invoked | 以质询分析实践投入与反馈，识别关键假设、设计真实测试，维护长期战略地图与决策卡 |
+| [to-plan](skills/learn/to-plan/SKILL.md) | User-invoked | 澄清学习目标，按个人情况共同讨论方案，经用户同意后生成或修订计划，保存目标、路线、方法和检验点 |
+| [to-task](skills/learn/to-task/SKILL.md) | User-invoked | 从计划检验点倒推编号任务，默认用简洁核心交付行动与验收，复杂任务按需展开 |
+| [teach-me](skills/learn/teach-me/SKILL.md) | User-invoked | 按必要知识开展教学，通过机制解释、适用判断和实践反馈保存学习证据 |
+| [learn-modeling](skills/learn/learn-modeling/SKILL.md) | Model-invoked | 将指定材料或概念建成可理解、可回到来源的内容模型 |
 
-- `STRATEGY-MAP.md` 与 `strategy-decisions/`：长期战略与关键取舍。
-- `MISSION.md` 与 `LEARNING-SOP.md`：学习的现实原因、范围、目标能力、方法和检查点。
-- `TASKS.md`：当前批次的适应性任务及其规划依据。
-- `LEARNER-PROFILE.md`：当前学习使命下的教学决定视图，只保留会改变下一节课的活跃分支、前置断层与理解边缘，由 `teach-me` 持续校准。
-- `learning-models/`：按指定材料、章节或概念建立的内容模型，不是学习证据。
-- `RESOURCES.md`、`lessons/`、`reference/`、`GLOSSARY.md`、`NOTES.md` 与 `assets/`：由 `teach-core` 维护的教学来源、课程、参考知识、术语、笔记与复用组件。
-- `reviews/`：检查点的学习效果证据、设计诊断与校正动作。
-- `learning-records/`：只记录会影响后续教学的持久理解、纠正或真实证据。
+## Up-stream
 
-学习流程共享哪些工件及其边界见 [学习工件说明](skills/ARTIFACTS.md)；每个 skill 所创建文件的格式随该 skill 一起发布。
+下列独立 skill 保持官方正文与界面配置，位于 `skills/up-stream/`。
 
-## Why these skills exist
+| Skill | 调用方式 | 用途 |
+| --- | --- | --- |
+| [grill-me](skills/up-stream/grill-me/SKILL.md) | User-invoked | 显式启动一轮质询 |
+| [grilling](skills/up-stream/grilling/SKILL.md) | Model-invoked | 为质询入口与战略判断提供可复用的访谈方法 |
 
-Agent 可以很快给出一份看似完整的学习计划，但学习中真正昂贵的部分通常没有被解决：目标是否值得投入、输入是否转化为行动、以及能力是否真的能在没有提示时被展示。
+Model-invoked 能力也可由用户直接点名；User-invoked 入口不会被其他阶段自动启动。`strategyfinder` 以 `grilling` 为主干，从实践及时间、金钱、精力投入与反馈分析候选方向，按需查证关键假设并设计低成本真实测试；复盘后由用户决定加码、维持、缩小或暂停。仅在材料理解阻塞判断时加载 `learn-modeling`，不强制研究子代理或独立研究笔记。
 
-这组 skills 把三个问题拆开处理：
+## 工作区状态
 
-- 用访谈和战略地图，把「想学」转换成经过取舍的现实问题。
-- 用 SOP、适应性任务与对话式教学，把问题转换成小而有反馈的行动。
-- 用复盘中的表现证据，而非课程完成度或熟悉感，决定下一步。
+- 环境配置记录目录、状态位置和协作规则，不承载学习进度。
+- `MISSION.md` 与 `LEARNING-PLAN.md` 记录现实原因、能力目标和学习路线。
+- 每个学习项目维护自己的使命、计划与教学证据；一个根 `AGENTS.md`（或已有权威入口）提供公共规则。
+- `tasks/01-标题.md`、`02-标题.md` 等文件记录计划内的独立任务及验收条件；在当前项目输入 `/teach-me 01` 即可开始或继续第 01 项。
+- 课程、参考资料、学习画像和学习记录支持持续教学；内容模型本身不证明掌握。
+- `STRATEGY-MAP.md` 与 `strategy-decisions/` 只在需要长期取舍时建立或更新。
 
-你始终是路线的所有者；这些 skills 只是让每次学习决策都能留下可检查、可修订的依据。
+共享边界见 [ARTIFACTS](skills/ARTIFACTS.md)，具体文件格式随创建它的 skill 提供。
+
+## DeepSeek Harness 插件
+
+[学习工作台](docs/strategy-plugin.md)是统一的 DeepSeek Harness 插件，每个 skill 对应一个功能，逐个实现、逐个验收。当前第一个功能是学习战略（`strategyfinder`）：战略文件夹选择、方向投入对照、决策依赖图、真实测试反馈和显式讨论；工作台先列出功能，点开才展开。原有 Markdown 继续作为事实来源。构建与安装见[插件说明](plugins/learning-workbench/README.md)。
+
+## Deprecated
+
+退役能力保存在 [deprecated](skills/deprecated/README.md)，不作为当前入口。其原入口改名为 `ARCHIVED.md`，避免被基于 `SKILL.md` 的安装器发现。`to-sop` 已改为 `to-plan`；旧工作区的学习 SOP 可作为计划迁移输入，原文件不会被自动删除。
+
+## 设计与维护
+
+项目借鉴 [Matt Pocock Skills](https://github.com/mattpocock/skills) 的小型、独立、可组合能力设计。官方副本固定于提交 [`5beb35b`](https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2)：对应上游包版本 1.3.1 的后续 main 更新，不等同于 v1.3.1 标签。来源与统一许可见 [UPSTREAM](UPSTREAM.md)。`teach-me` 内保留完整教学正文及格式副本；`strategyfinder` 内的 research 与 prototype 副本暂按原字节保留，作为可选资料，无强制运行依赖，也不增加公开入口。
+
+教学方法也借鉴《好好学习》《好好思考》及 [How I Use AI to Learn Things](https://www.youtube.com/watch?v=kzcI5F4tGiU)：区分来源与解释，以当前理解边缘安排教学，通过独立表现和真实行动反馈校准下一步。
+
+第一次了解结构可读[项目全貌](docs/project-overview.md)，选择入口可读[人类文档](docs/README.md)。[skills 清单](skills/README.md)是调用分类的权威来源，[领域词汇表](CONTEXT.md)定义共同术语，[协作说明](AGENTS.md)约束仓库维护。

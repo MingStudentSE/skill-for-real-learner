@@ -1,0 +1,5 @@
+interface:
+  display_name: "配置学习工作区"
+  short_description: "复用现有布局，配置本地学习入口、状态路径和阅读规则"
+policy:
+  allow_implicit_invocation: false

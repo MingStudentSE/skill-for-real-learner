@@ -1,0 +1,5 @@
+interface:
+  display_name: "定制学习计划"
+  short_description: "澄清目标，按个人情况定制路线、方法与检验点"
+policy:
+  allow_implicit_invocation: false

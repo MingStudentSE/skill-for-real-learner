@@ -1,46 +1,36 @@
 # 仓库协作说明
 
-## 结构
+## 结构与权威来源
 
-本仓库发布的学习 skill 都直接位于 `skills/<skill-name>/`，保持该目录平铺。每个 skill 以 `SKILL.md` 为入口，并在需要时携带 `agents/openai.yaml`、`references/` 或 `evals/`。上游依赖 `grilling`、`research` 与 `prototype` 由使用者另行安装，不属于本仓库的 skill 目录。`teach-core` 是唯一例外：它是对 Matt Pocock 上游 `teach` skill 的完整镜像。
+当前发布 9 个 skill：本项目维护的 7 个位于 `skills/learn/<skill-name>/`，独立官方能力 `grill-me`、`grilling` 位于 `skills/up-stream/<skill-name>/`。`skills/deprecated/` 保存退役内容，入口改名为 `ARCHIVED.md`，不参与当前安装发现。
 
-`skills/README.md` 是 skill 清单及调用分类的权威来源；`skills/ARTIFACTS.md` 只定义跨流程共享工件的边界；`CONTEXT.md` 定义学习领域术语。各 skill 创建文件的具体格式保留在该 skill 自己的 `references/` 中，除非该格式明确继承自上游依赖。
+`skills/README.md` 是清单和调用分类的权威来源；`skills/ARTIFACTS.md` 定义共享状态边界；`CONTEXT.md` 定义领域术语。每个公开 skill 都有 `docs/<skill-name>.md`，由 `docs/README.md` 索引。面向人文档说明选择场景、有效信号和边界，运行步骤留在 skill 中。
 
-除作为上游镜像保留的 `teach-core` 外，每个本仓库发布的 skill 都有一页面向人的文档，路径为 `docs/<skill-name>.md`；`docs/README.md` 是文档索引。文档帮助人判断何时使用，而不是复制 `SKILL.md` 的运行步骤或安装命令。
+`.obsidian/`、`reference/`、`skills/matt/`、`.DS_Store` 与本地 `skillhub/` 分发副本不加入版本控制；本地副本不定义正式清单。
 
-`.obsidian/`、`reference/`、`skills/matt/` 和 `.DS_Store` 都是本地内容，不要加入版本控制。
+## 官方副本
 
-## 维护 `teach-core`
+`skills/up-stream/grill-me/` 和 `skills/up-stream/grilling/` 的正文与界面配置原样保存。`skills/learn/teach-me/references/teach/` 保存完整官方教学正文与四份格式，不设独立入口或内部界面配置。`skills/learn/strategyfinder/references/research/` 保存官方研究正文，`references/prototype/` 保存官方原型正文及 LOGIC、UI 文件，均作为可选资料保留，不构成强制运行依赖，不复制 agents 配置或设独立公开入口。来源、固定提交与版权许可统一记录在根 `UPSTREAM.md`；外层记录对应副本来源和提交。
 
-更新 `teach-core` 时，先查看 [Matt Pocock Skills](https://github.com/mattpocock/skills) 上游仓库当前的 `teach` skill，再完整同步 `SKILL.md`、`MISSION-FORMAT.md`、`RESOURCES-FORMAT.md`、`LEARNING-RECORD-FORMAT.md`、`GLOSSARY-FORMAT.md` 与 `agents/openai.yaml`。
+更新官方副本时先核对上游目录与固定版本，完整同步对应文件，并逐文件比较字节一致性。官方原文不承载本项目补丁；教学和战略领域适配、路径解释及授权边界只写在各外层及其自有参考资料。官方格式文件的链接相对于内部副本，课程、资产及学习记录等路径相对于用户的学习工作区。
 
-同步后只保留以下本仓库差异：目录和 frontmatter `name` 改为 `teach-core`；删除 `disable-model-invocation: true`；删除 `policy.allow_implicit_invocation: false`；界面名称改为 `Teach Core`。`teach-core` 不承载本仓库自己的教学补丁；所有增量行为只写在 `teach-me`。完成时逐文件比较上游，确认没有其他正文或格式差异。
+`teach-core` 已退役，不再更新为运行依赖。内部 `teach`、`research`、`prototype` 副本均不增加可安装 skill；安装发现应在外层 `teach-me/SKILL.md` 和 `strategyfinder/SKILL.md` 停止向其资源目录递归。
 
-## 维护 `grill-with-learn`
+## 维护 grill-with-learn
 
-`grill-with-learn` 有意沿用上游 `grill-with-docs` 的薄适配模式，只把文档建模能力替换为本仓库的 `learn-modeling`。`SKILL.md` 中“using `/learn-modeling`”表示在质询过程中可按需复用，不表示无条件建立学习模型。审计或修改时，以 `skills/README.md` 与 `docs/grill-with-learn.md` 的公开契约为准：仅当指定材料阻塞当前判断时才建模；不得仅因入口正文很短，而要求它重复 `grilling` 的流程分支、停止条件、交接边界或独立评测。
+此入口沿用上游 `grill-with-docs` 的薄适配模式，把建模能力替换为 `learn-modeling`。仅当指定材料阻塞当前判断时按需建模。入口保持简短，不重复 `grilling` 的分支、停止线或交接规则。
 
-## 维护 skill 清单
+## 调用与工件
 
-新增、删除、重命名或改变一个 skill 的行为时，同时完成以下同步：
+- User-invoked 设置 `disable-model-invocation: true`，界面配置设置 `policy.allow_implicit_invocation: false`；每个入口由用户显式启动，不自动调用另一个用户入口。
+- Model-invoked 不设置上述禁用项，可按需复用，也可由用户直接调用。
+- `to-plan` 与用户聊清楚学习目标和个人情况，共同讨论并调整具体方案，取得明确同意后才生成或更新 `LEARNING-PLAN.md`；战略、使命文件及前置质询均非必要条件，不为制定计划强制创建它们。已有战略和使命仅作参考，不自动改写。计划独立交付，以可执行、可检验作为完成标准；to-plan 正文与格式不写任务入口或后续交接要求；`to-task` 优先沿用当前对话已明确的计划，按需参考已有计划文件，在当前项目生成 `tasks/01-标题.md` 等编号任务；不强制计划文件或特定上游入口，不在正文与格式中编排教学入口。一个根 Agent 入口支持多个项目，各项目使命、计划与教学状态独立。
+- `teach-me` 支持 `/teach-me 01` 定位当前项目任务，负责课程、练习、掌握检验和教学记录，计划修订建议交给用户下一次运行 `to-plan`，任务重排交给 `to-task`。
+- `strategyfinder` 以 `grilling` 为主干，从实践、时间/金钱/精力投入及反馈分析候选方向，识别关键假设，按需查证外部事实并设计低成本真实测试；复盘后由用户决定加码、维持、缩小或暂停。仅在材料理解阻塞判断时复用 `learn-modeling`，维护长期战略地图与决策卡；不强制研究子代理、独立研究笔记或代码原型。产物存用户工作区，卡留证据和上下文指针；提交临时分支、修改真实实现及 issue 操作仅在明确授权后执行。
+- 旧 SOP 只作为计划迁移输入，保留原文，不自动删除学习者状态。
 
-1. 更新根目录 `README.md` 与 `skills/README.md` 中对应的名称、分类、描述和指向 `SKILL.md` 的链接。
-2. 重新阅读 `skills/ask-ming/SKILL.md`，更新它推荐的入口、工件说明和边界；它必须反映当前真实的选择，而不是过时的流程图。
-3. 若共享工件边界改变，更新 `skills/ARTIFACTS.md`；若跨流程术语改变，更新 `CONTEXT.md`；若模板或评测受影响，同步对应 skill 的 `references/` 或 `evals/`。
-4. 同步适用的 `docs/<skill-name>.md`；`teach-core` 不设此页面。重命名时移动旧页面，删除 skill 时删除旧页面。页面必须说明调用方式、触发边界、可观察的有效信号和与其他入口的关系。
-5. 检查所有相对链接、旧目录名、旧 `/skill` 命令和交叉引用；仓库中不应遗留已废弃的嵌套目录链接。
+## 变更同步与验证
 
-## 调用契约
+新增、改名、退役或改变行为时，同步根 README、skills 清单、对应人类文档及 docs 索引。共享状态改变时同步 ARTIFACTS，术语改变时同步 CONTEXT，格式或评测受影响时同步本入口 references/evals。目录重构时修复相对链接及运行引用；退役内容的旧命令只作为历史保留，不重新推荐。
 
-以 `skills/README.md` 中的分类为准。
-
-- User-invoked skill 必须在 `SKILL.md` 中设置 `disable-model-invocation: true`，并在 `agents/openai.yaml` 中设置 `policy.allow_implicit_invocation: false`。它们由学习者显式选择；可以建议下一条 `/skill` 命令，但不会自动启动另一个阶段。
-- Model-invoked skill 不设置上述禁用项，可在确有需要时被学习流程复用。`teach-core` 作为上游镜像保留，不列入面向学习者的入口、文档或 `ask-ming` 推荐。
-- `ask-ming` 是导航器：默认推荐一条由学习者显式执行的下一步命令及其工件；只有确有重要取舍时才附一个备选。它既不运行被推荐的 skill，也不改写学习者工件。
-- 各用户入口通过工件交接而保持独立。用 `STRATEGY-MAP.md`、`strategy-decisions/`、`MISSION.md`、`LEARNING-SOP.md`、`TASKS.md`、`learning-models/`、`learning-records/`、`reviews/` 及相关课程或参考工件表达前序状态，不把阶段自动串联起来。该规则不妨碍一个 skill 在确有需要时复用 model-invoked skill 或上游依赖。
-
-## 修改与校验
-
-保持 `SKILL.md` 的 `name` 与目录名一致，并保留清晰的 `description`。修改调用属性时，同步检查对应的 `agents/openai.yaml` 与两份 README 的分类是否一致。
-
-完成修改前，确认仓库文档中的所有受影响链接存在、`ask-ming` 没有遗漏或指向不存在的入口，并运行 `git diff --check`。学习者工作区中的模板链接则按该 skill 的输出布局验证。提交前只暂存本次任务相关的文件。
+每个当前 skill 的 frontmatter `name` 必须与目录名一致。完成前验证清单只有九个公开入口、归档无 `SKILL.md`、官方副本逐字一致、受影响链接存在，并运行 `git diff --check` 和相关已有校验。运行时工件链接按输出布局验证，不能当作仓库文件判定失效。提交前只暂存本次任务文件。
