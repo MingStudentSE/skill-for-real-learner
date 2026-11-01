@@ -9,9 +9,9 @@ skills/matt/
 # SkillHub distribution package.
 /skillhub/
 
-# Learning plugin development dependencies and local test artifacts.
+# Learning plugin build output, development dependencies, and local test artifacts.
 /plugins/*/node_modules/
 /plugins/*/artifacts/
-/plugins/*/dist/skills/
+/plugins/*/dist/
 /plugins/*/*.tgz
 

@@ -22,7 +22,7 @@
 
 交互与响应式：功能默认折叠；文件夹设置与全局讨论各只有一个入口。视图、筛选、搜索与选中卡在功能内保留；进入/切换视图时焦点落到标题，详情关闭后恢复原列表行与滚动位置。`/` 聚焦搜索，`Esc` 清搜索或关闭详情，`⌘/Ctrl + Enter` 提交讨论，首个 Tab 可跳到内容。设置修改后取消需确认，保存后提示已重新读取；讨论提交后提供刷新资料。宽屏保留左侧功能栏，容器窄于 980px 时折叠为顶部视图标签，窄于 720px 时投入表转为逐行卡片，640px 以下单列布局。文本对比按 4.5:1 核对，焦点环常驻，触控目标在窄屏提升到 44px，`prefers-reduced-motion` 下取消动画；每个图节点均可键盘操作，下方列表提供完整替代。
 
-界面与交互检查图：[功能目录](artifacts/strategy-home.png)、[方向与取舍](artifacts/strategy-overview.png)、[决策与依赖图](artifacts/strategy-decisions-graph.png)、[设置与未保存确认](artifacts/strategy-settings.png)、[提交后的刷新入口](artifacts/strategy-notice.png)、[移动端](artifacts/strategy-mobile.png)、[暗色](artifacts/strategy-dark.png)。
+界面与交互检查图保存在 [screenshots](screenshots/)：[功能目录](screenshots/strategy-home.png)、[方向与取舍](screenshots/strategy-overview.png)、[决策与依赖图](screenshots/strategy-decisions-graph.png)、[设置与未保存确认](screenshots/strategy-settings.png)、[提交后的刷新入口](screenshots/strategy-notice.png)、[移动端](screenshots/strategy-mobile.png)、[暗色](screenshots/strategy-dark.png)。
 
 ## 本地开发
 
@@ -37,10 +37,10 @@ pnpm run test:ui
 
 安装依赖只允许 esbuild 的构建脚本。UI 检查优先使用 Playwright 管理的 Chromium，本机没有该浏览器时可复用 macOS 安装的 Chrome；其他平台可执行 `pnpm exec playwright install chromium` 后运行。
 
-构建产物：
+构建产物（`dist/` 由 `pnpm run build` 生成，不入版本控制）：
 
-- [客户端模块](dist/client.js)：使用当前 Harness 的 ModuleLoader 工厂格式，共用宿主 React。
-- [独立预览](dist/preview.html)：同一套 UI 与虚构样例构建的单文件 HTML，不访问真实文件。
+- `dist/client.js`：客户端模块，使用当前 Harness 的 ModuleLoader 工厂格式，共用宿主 React。
+- `dist/preview.html`：独立预览，同一套 UI 与虚构样例构建的单文件 HTML，不访问真实文件。
 - `dist/skills/`：从仓库源复制的备用 skill 及参考资料；由构建生成，不作为另一套 skill 源维护。
 
 Host 使用 [host.mjs](src/host.mjs)，文件读取在 [repository.mjs](src/repository.mjs)，解析与依赖计算在 [model.mjs](src/model.mjs)，UI 在 [App.jsx](src/App.jsx)，宿主适配在 [client.jsx](src/client.jsx)。
