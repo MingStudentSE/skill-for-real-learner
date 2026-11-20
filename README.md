@@ -12,19 +12,20 @@ npx skills@latest add MingStudentSE/skill-for-real-learner
 
 在安装器中选择下方 9 个当前 skill，无需另外安装其他 skill 套件。查证外部事实、制作课程和执行测试等工作需要 Agent 自身具备相应工具。
 
-安装后在学习工作区运行 `/setup-learn-skills`，建立一个根 Agent 指令入口与多项目布局，保存本地路径和使用规则。已有配置与学习资料会被沿用；学习计划和教学记录由各自入口按需创建。
+安装后，在自己的学习项目目录直接运行 `/to-plan` 制定计划，或输入 `/teach-me 我想理解……` 开始学习。已有根指令、`docs/agents/learning.md`、自定义路径和学习资料继续沿用。新项目可直接使用默认布局，计划和教学记录按需创建。
 
 ## 从哪里开始
+
+第一次使用或拿不准该选哪个工具，可以输入 `/ask-ming 我有学习材料，想知道该怎么用这套工具`。它会结合你的目标解释相关入口、示范用法，再由你选择下一步。[ask-ming 使用指南](docs/ask-ming.md)
 
 ### 长期学习
 
 适合想持续提升一项能力、系统学习一个领域，或需要重新判断学习方向的人。
 
-1. **配置学习环境 — [setup-learn-skills](docs/setup-learn-skills.md)**：建立公共学习配置与根 Agent 规则入口，让多个学习项目分别保存计划、任务和教学记录。首次配置后，新增项目沿用公共约定。
-2. **判断长期方向 — [strategyfinder](docs/strategyfinder.md)**：当你不确定哪些方向值得持续投入时，从已有实践、时间、金钱、精力投入与反馈出发，识别关键假设，设计低成本真实测试，并维护长期战略地图与决策卡。方向明确时可直接制定计划。
-3. **共同制定计划 — [to-plan](docs/to-plan.md)**：可以从模糊的学习意图开始，聊清目标、基础与可投入的资源，共同调整学习路线、方法、节奏和检验点；你同意具体方案后，再生成或更新学习计划。
-4. **拆成可执行任务 — [to-task](docs/to-task.md)**：沿用当前对话中已明确的计划，或参考已有计划文件，从检验点倒推编号任务，写清行动、产出和验收条件。
-5. **持续教学与检验 — [teach-me](docs/teach-me.md)**：在当前项目输入 `/teach-me 01`，开始或继续第 01 项任务。通过讲解、练习、独立表现与实际反馈检验理解，保存学习证据，并记录下一步。需要调整计划或重排任务时，由你再次调用对应入口。
+1. **判断长期方向 — [strategyfinder](docs/strategyfinder.md)**：当你不确定哪些方向值得持续投入时，从已有实践、时间、金钱、精力投入与反馈出发，识别关键假设，设计低成本真实测试，并维护长期战略地图与决策卡。方向明确时可直接制定计划。
+2. **共同制定计划 — [to-plan](docs/to-plan.md)**：可以从模糊的学习意图开始，聊清目标、基础与可投入的资源，共同调整学习路线、方法、节奏和检验点；你同意具体方案后，再生成或更新学习计划。
+3. **拆成可执行任务 — [to-task](docs/to-task.md)**：沿用当前对话中已明确的计划，或参考已有计划文件，从检验点倒推编号任务，写清行动、产出和验收条件。
+4. **持续教学与检验 — [teach-me](docs/teach-me.md)**：在当前项目输入 `/teach-me 01`，开始或继续第 01 项任务。通过讲解、练习、独立表现与实际反馈检验理解，保存学习证据，并记录下一步。需要调整计划或重排任务时，由你再次调用对应入口。
 
 已有计划可以直接拆任务，已有任务可以直接开始教学。长期方向判断与前置质询都按需使用。
 
@@ -51,7 +52,7 @@ npx skills@latest add MingStudentSE/skill-for-real-learner
 
 | Skill | 调用方式 | 何时使用与交付 |
 | --- | --- | --- |
-| [setup-learn-skills](skills/learn/setup-learn-skills/SKILL.md) | User-invoked | 建立工作区配置与根 Agent 规则指针 |
+| [ask-ming](skills/learn/ask-ming/SKILL.md) | User-invoked | 按学习场景介绍其余八个入口，示范调用方式，由你选择下一步 |
 | [grill-with-learn](skills/learn/grill-with-learn/SKILL.md) | User-invoked | 澄清学习目标或决策，指定材料阻塞判断时按需建模 |
 | [strategyfinder](skills/learn/strategyfinder/SKILL.md) | User-invoked | 以质询分析实践投入与反馈，识别关键假设、设计真实测试，维护长期战略地图与决策卡 |
 | [to-plan](skills/learn/to-plan/SKILL.md) | User-invoked | 澄清学习目标，按个人情况共同讨论方案，经用户同意后生成或修订计划，保存目标、路线、方法和检验点 |
@@ -74,7 +75,7 @@ Model-invoked 能力也可由用户直接点名；User-invoked 入口不会被�
 
 - 环境配置记录目录、状态位置和协作规则，不承载学习进度。
 - `MISSION.md` 与 `LEARNING-PLAN.md` 记录现实原因、能力目标和学习路线。
-- 每个学习项目维护自己的使命、计划与教学证据；一个根 `AGENTS.md`（或已有权威入口）提供公共规则。
+- 每个学习项目维护自己的使命、计划与教学证据；如有根 `AGENTS.md` 或其他权威入口，各项目沿用其中的公共规则。
 - `tasks/01-标题.md`、`02-标题.md` 等文件记录计划内的独立任务及验收条件；在当前项目输入 `/teach-me 01` 即可开始或继续第 01 项。
 - 课程、参考资料、学习画像和学习记录支持持续教学；内容模型本身不证明掌握。
 - `STRATEGY-MAP.md` 与 `strategy-decisions/` 只在需要长期取舍时建立或更新。

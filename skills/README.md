@@ -8,7 +8,7 @@
 
 ### User-invoked
 
-- [setup-learn-skills](learn/setup-learn-skills/SKILL.md)：配置一个根 Agent 入口、多个学习项目及项目内状态路径。
+- [ask-ming](learn/ask-ming/SKILL.md)：结合学习者的问题解释其余八个公开入口的用途、区别与用法，由学习者选择并启动下一步。
 - [grill-with-learn](learn/grill-with-learn/SKILL.md)：复用 `grilling` 澄清学习问题；指定材料阻塞判断时按需复用 `learn-modeling`。
 - [strategyfinder](learn/strategyfinder/SKILL.md)：以 `grilling` 为主干，从实践及时间/金钱/精力投入与反馈分析候选方向，识别关键假设、按需查证外部事实并设计低成本真实测试；复盘后由用户决定加码、维持、缩小或暂停，维护唯一的长期战略地图与决策卡。仅在材料理解阻塞判断时复用 `learn-modeling`。
 - [to-plan](learn/to-plan/SKILL.md)：澄清学习目标，根据个人基础、时间、精力和资源共同讨论方案，经用户同意后生成学习计划，输出 `LEARNING-PLAN.md`；战略与使命文件为可选参考。
@@ -35,7 +35,7 @@
 
 ## 调用与状态
 
-`strategyfinder` 的可选界面是[Harness 学习工作台](../docs/strategy-plugin.md)中的学习战略功能。插件沿用本清单与原工件，不增加第十个 skill，也不自动启动其他用户入口。
+`strategyfinder` 的可选界面是[Harness 学习工作台](../docs/strategy-plugin.md)中的学习战略功能。插件沿用本清单与原工件，不增加独立 skill，也不自动启动其他用户入口。
 
 User-invoked 入口由学习者显式启动，通过工件交接，不会相互自动启动。Model-invoked 能力可以按需被当前流程复用，也可被用户直接点名。
 

@@ -39,4 +39,4 @@
 
 ## 它在流程中的位置
 
-`strategyfinder` 决定长期值得投入的方向，`twelve-week-planner` 负责让一个已选项目在短反馈窗口中真正运行。学习型项目仍可用 [`to-sop`](../to-plan.md) 定义阶段方法、用 [`to-task`](../to-task.md) 规划学习任务、用 [`study-review`](study-review.md) 检验能力证据；十二周规划不替代这些工件，也不会自动启动它们。拿不准入口时先用 [`ask-ming`](ask-ming.md)。
+`strategyfinder` 决定长期值得投入的方向，`twelve-week-planner` 负责让一个已选项目在短反馈窗口中真正运行。学习型项目仍可用 [`to-sop`](../to-plan.md) 定义阶段方法、用 [`to-task`](../to-task.md) 规划学习任务、用 [`study-review`](study-review.md) 检验能力证据；十二周规划不替代这些工件，也不会自动启动它们。拿不准入口时先用 [`ask-ming`](../ask-ming.md)。

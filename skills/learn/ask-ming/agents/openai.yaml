@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask Ming"
+  short_description: "了解学习 skill 的用途、选择方法和调用示例"
+policy:
+  allow_implicit_invocation: false

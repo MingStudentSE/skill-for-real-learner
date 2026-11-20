@@ -14,7 +14,7 @@
 | [research 内部副本](skills/learn/strategyfinder/references/research/SKILL.md) | [engineering/research](https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/research) | 正文原样保存；不复制 agents 配置 |
 | [prototype 内部副本](skills/learn/strategyfinder/references/prototype/SKILL.md) | [engineering/prototype](https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/prototype) | 正文、LOGIC.md 与 UI.md 原样保存；不复制 agents 配置 |
 
-更新时解析目标提交，核对上游目录文件，再逐文件比较当前范围。教学增量保留在外层 `teach-me`；战略领域适配、用户工作区产物路径及明确授权边界保留在外层 `strategyfinder`，均不改内部原文。内部副本不增加公开 skill，也不要求额外安装官方 skill。`grill-with-learn` 的薄适配模式参考上游 `grill-with-docs`；`setup-learn-skills` 的本地配置方式参考上游 `setup-matt-pocock-skills`。退役 `teach-core` 是此前的教学镜像，仅供历史查阅，不宣称已同步到上述提交。
+更新时解析目标提交，核对上游目录文件，再逐文件比较当前范围。教学增量保留在外层 `teach-me`；战略领域适配、用户工作区产物路径及明确授权边界保留在外层 `strategyfinder`，均不改内部原文。内部副本不增加公开 skill，也不要求额外安装官方 skill。`grill-with-learn` 的薄适配模式参考上游 `grill-with-docs`。退役 `teach-core` 是此前的教学镜像，仅供历史查阅，不宣称已同步到上述提交。
 
 `to-plan` 的设计参考 [to-spec](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/to-spec/SKILL.md) 对已有对话、范围与验收决定的综合方式；学习目标澄清与个性化规划由本项目维护，不作为官方副本。学习方法同时参考成甲《好好学习》《好好思考》与《复利日知录》中从真实问题切入、按用途决定深度、实践反馈及可复用积累的理念；本地研究资料不是安装或运行依赖。
 

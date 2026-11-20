@@ -1,12 +1,12 @@
 # Skills for Real Learners 文档
 
-本目录帮助选择入口，说明适用场景、有效信号和能力边界；具体运行步骤见 [skills 清单](../skills/README.md)。第一次了解项目可先读[项目全貌与阅读导航](project-overview.md)。
+安装后即可在学习项目目录直接使用下列入口。本目录帮助选择入口，说明适用场景、有效信号和能力边界；具体运行步骤见 [skills 清单](../skills/README.md)。第一次了解项目可先读[项目全貌与阅读导航](project-overview.md)。
 
 ## Learn
 
 | Skill | 调用方式 | 适合解决的问题 |
 | --- | --- | --- |
-| [setup-learn-skills](setup-learn-skills.md) | User-invoked | 建立一个根 Agent 入口、多项目布局与读取规则 |
+| [ask-ming](ask-ming.md) | User-invoked | 了解整套工具，弄清相近入口的区别，按自己的目标选择下一步 |
 | [grill-with-learn](grill-with-learn.md) | User-invoked | 学习问题需要澄清，材料理解可能阻塞判断 |
 | [strategyfinder](strategyfinder.md) | User-invoked | 从实践投入与反馈分析长期方向，测试关键假设后决定投入取舍 |
 | [to-plan](to-plan.md) | User-invoked | 澄清学习目标，共同讨论适合个人情况的方案，同意后生成学习计划 |

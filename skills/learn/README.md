@@ -4,7 +4,7 @@
 
 ## User-invoked
 
-- [setup-learn-skills](setup-learn-skills/SKILL.md)：配置本地学习环境。
+- [ask-ming](ask-ming/SKILL.md)：结合你的需要解释各入口的用途并示范调用方式，下一步由你决定。
 - [grill-with-learn](grill-with-learn/SKILL.md)：质询澄清，指定材料阻塞判断时按需建模。
 - [strategyfinder](strategyfinder/SKILL.md)：以 `grilling` 为主干，从实践及时间/金钱/精力投入与反馈分析候选方向，识别关键假设、按需查证并设计低成本真实测试；复盘后由用户决定加码、维持、缩小或暂停。维护战略地图与决策卡，仅在材料理解阻塞判断时加载 `learn-modeling`。
 - [to-plan](to-plan/SKILL.md)：定制与修订学习计划。

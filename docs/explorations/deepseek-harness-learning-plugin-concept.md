@@ -1,6 +1,6 @@
 # DeepSeek Harness 学习插件：探索与构思
 
-本稿是产品探索，不是已批准的实现规格。依据当前九个公开 skill 与工件契约整理，不修改学习流程或现有格式。Harness 接口核实见[插件能力调研](deepseek-harness-plugin-capabilities.md)。
+本稿是产品探索，不是已批准的实现规格。依据[公开 skill 清单](../../skills/README.md)与工件契约整理，不修改学习流程或现有格式。Harness 接口核实见[插件能力调研](deepseek-harness-plugin-capabilities.md)。
 
 **已确定的产品方向（用户本轮修订）：直接使用 DeepSeek Harness 主页作为学习工作台，必须先设定学习工作空间。** 参考 [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop)，复用原生界面与会话；主页的精确扩展点及宿主适配边界另见[桌面主页与工作空间调研](dsh-desktop-home-workspace-research.md)。本文的“主页”指应用回到首页时出现的学习入口，不是额外侧栏里另开的学习应用。
 
@@ -51,7 +51,7 @@ flowchart LR
 
 选择后只读识别已有根指令、学习配置与项目布局，显示空间名称、根目录、发现的项目和配置情况。空目录也是有效选择。目录确认只绑定空间，不自动生成计划、任务、课程或学习画像。
 
-已有配置可直接读取；缺少配置时提供显式“配置学习环境”入口，由 setup-learn-skills 创建或合并公共配置。工作空间绑定是本插件的前提，运行 setup 不是已有 skill 的新增强制前置。发现多个可能项目时让用户选择，不把每个子目录都识别为学习项目。
+本构思中的插件需要先绑定工作空间。已有配置可直接读取，缺少配置时按项目默认布局读取。学习者也可直接在项目目录运行 skill。发现多个可能项目时让用户选择，不把每个子目录都识别为学习项目。
 
 ### 日常进入：已绑定工作空间
 

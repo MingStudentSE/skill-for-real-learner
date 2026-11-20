@@ -4,11 +4,10 @@
 
 | 旧能力 | 历史入口 | 当前去向 |
 | --- | --- | --- |
-| ask-ming | [归档](ask-ming/ARCHIVED.md) | 当前入口直接见根 README 与 skills 清单 |
 | twelve-week-planner | [归档](twelve-week-planner/ARCHIVED.md) | 十二周执行系统不在 MVP 范围 |
 | learn-one-concept | [归档](learn-one-concept/ARCHIVED.md) | 概念教学使用 teach-me |
 | study-review | [归档](study-review/ARCHIVED.md) | 掌握检验在 teach-me 教学中完成 |
-| setup-wiki | [归档](setup-wiki/ARCHIVED.md) | setup-learn-skills 只建立学习环境，不接管通用知识库 |
+| setup-wiki | [归档](setup-wiki/ARCHIVED.md) | 通用知识库配置不在当前发布范围 |
 | user-profile-builder | [归档](user-profile-builder/ARCHIVED.md) | 协作画像管理不在 MVP 范围 |
 | teach-core | [归档](teach-core/ARCHIVED.md) | 官方教学正文保存在 teach-me 内部 |
 
